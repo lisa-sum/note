@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES8新增的对象方法</title>
+</head>
+<body>
+<script>
+	function * iter () {
+		let index = 0
+		let arr = Object.entries(this)
+		let length = arr.length
+		while (true) {
+			if (index >= length) {
+				return false
+			}
+			else {
+				let key = arr[index] && arr[index][0]
+				let val = arr[index] && arr[index][1]
+				let result = { [key]: val }
+				index++
+				yield result
+			}
+		}
+	}
+
+	// 创建对象
+	const school = {
+		name: '尚硅谷',
+		cities: ['北京', '上海', '深圳'],
+		xueke: ['前端', 'Java', '大数据', '运维'],
+	}
+
+	// 获取对象的所有键
+	console.log(Object.keys(school))
+	// for...in写法
+	for (let o in school) {
+		console.log(o)
+	}
+
+	// 获取对象所有的值
+	console.log(Object.values(school))
+	// 开启迭代器以后 for...of也可以
+	school.__proto__[Symbol.iterator] = iter
+	for (let v of school) {
+		console.log(v)
+	}
+
+	// 将对象内的键值对组合成一对
+	console.log(Object.entries(school))
+
+	// 创建map 利用map.set('name', '尚硅谷');特性组成键值对
+	const m = new Map(Object.entries(school))
+	console.log(m, m.get('name'))
+
+	// 设置对象的默认设置
+	const obj = Object.create(null, {
+		name: {
+			// 设置值
+			value: '尚硅谷',
+			writable: true, // true可修改
+			configurable: true, // true可被删除被修改
+			enumerable: true, // true可被for-in循环
+		},
+	})
+
+	// 查看对象的默认设置
+	console.log(obj, Object.getOwnPropertyDescriptors(obj))
+</script>
+</body>
+</html>

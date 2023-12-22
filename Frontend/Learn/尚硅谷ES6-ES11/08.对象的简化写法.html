@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// ES6允许在大括号里面,直接写入变量和函数,作为对象的属性和方法这样的书写更加简洁
+		let name = '尚硅谷'
+		let change = function () {
+			console.log(1)
+		}
+
+		// 可以把变量或者函数直接写入对象内部
+		const SCHOOL = {
+			name,
+			change,
+			// ES6语法中函数声明不再添加function
+			improve () {
+				console.log('这是一个函数')
+			},
+		}
+
+		console.log(SCHOOL)
+
+		// const SCHOOL = {
+		//   name: name,
+		//   change: change,
+		//   improve: function() {
+		//     console.log('这是一个函数');
+		//   }
+		// } // ES5
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

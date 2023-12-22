@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		function Phone () {
+			this.age = 18
+		}
+
+		// 在构造函数内部的变量都需要this开头来指向实例,如果不想写this,需要在函数外面以Phone.name的形式来命名变量,这种变量称之为静态成员
+		Phone.name = '手机'
+
+		Phone.change = function () {
+			console.log('我可以改变世界')
+		}
+
+		Phone.prototype.size = '5.5inch'
+
+		// 输出静态成员
+		console.log(Phone.name)
+
+		let nokia = new Phone()
+		// 输出动态成员
+		console.log(nokia.age)
+
+		//静态成员无法读取导致报错所以try兜住
+		try {
+			console.log(nokia.name)
+			nokia.change()
+		}
+		catch (err) {
+			console.warn(err)
+		}
+
+		class Shouji {
+			// static 是静态属性,后面的值只能class本身来读取,实例无法读取
+			static name = '手机'
+
+			static change () {
+				console.log('可以')
+			}
+		}
+
+		let huawei = new Shouji()
+		// 实例无法读取到static
+		console.log(huawei.name)
+		console.log(Shouji.name)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

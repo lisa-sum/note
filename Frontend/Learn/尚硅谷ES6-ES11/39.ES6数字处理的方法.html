@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//0.Number.EPSILON 是 JavaScript 表示的最小精度
+		//EPSILON 属性的值接近于2.2204460492503130808472633361816E-16
+		function equal (a, b) {
+			//将0.1+0.2的值减去结果的误差,小于最精误差则为0.3
+			if (Math.abs(a - b) < Number.EPSILON) {
+				return true//其实结果还是不准,只是布尔值变了
+			}
+			else {
+				return false
+			}
+		}
+
+		console.log(0.1 + 0.2 === 0.3)//false  ES5中的bug,ES6提出解决方案
+		console.log(equal(0.1 + 0.2, 0.3))
+
+		//1.二进制和八进制
+		let b = 0b1010//二进制
+		console.log(b)
+		let o = 0o777//八进制
+		console.log(o)
+		let d = 100//十进制
+		console.log(d)
+		let x = 0xff//16进制
+		console.log(x)
+
+		//2. Number. isFinite检测 一个 数值是否为有限数,有限数则为true,无限数则为false 100除以0就是无限数
+		console.log(Number.isFinite(100))
+		console.log(Number.isFinite(100 / 0))
+		console.log(Number.isFinite(Infinity))
+
+		//3. Number.isNaN 检测一个数值是否为NaN,ES5中isNaN作为一个单独的函数,ES6作为Number的方法
+		console.log(Number.isNaN(123))//是数字false   不是返回true
+
+		//4. Number . parseInt Number . parseFloat字符申转整数
+		console.log(Number.parseInt('521134546'))
+		console.log(Number.parseFloat('3.1415926神器123'))
+
+		//5. Number. isInteger判断一个数是否为整数
+		console.log(Number.isInteger(5))//整数为true
+		console.log(Number.isInteger(2.1))//浮点数为false
+
+		//6. Math.trunc 将数字的小数部分抹掉
+		console.log(Math.trunc(3.5))//3
+
+		//7. Math.sign 判断一个数到底为正数负数还是零
+		console.log(Math.sign(100))  //1
+		console.log(Math.sign(0))    //0
+		console.log(Math.sign(-100)) //-1
+
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "showIndentGuide": true,
+  "showLineNumber": true,
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "rightToLeft": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./images",
+  "newLinkFormat": "relative"
+}

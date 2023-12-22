@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// ...扩展运算符能够将『数组』转换为逗号分隔的『参数序列』
+		// 声明一个数组
+		var bigbang = [`GD`, 'TOP', `太阳`, `胜利`, `大成`]
+
+		// 声明一个函数
+		function chunwan () {
+			// 伪数组不能通过forEach遍历
+			console.log(arguments)
+		}
+
+		// 不加...的话输出到控制台只有一个数组对象,加了之后输出五个arguments参数
+		chunwan(...bigbang)//相当于chunwan(`GD`,'TOP',`太阳`,`胜利`,`大成`)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

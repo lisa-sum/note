@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//1. object.is 判断两个值是否完全相等
+		console.log(Object.is(120, 120))
+		//与===类似,但是这个可以判断两个NaN为真
+		console.log(Object.is(NaN, NaN))//true
+		console.log(NaN === NaN)//false
+
+		//2. object.assign对象的合并
+		const config1 = {
+			host: 'localhost',
+			port: 3306,
+			name: 'root',
+			pass: 'root',
+			test: 'test',
+		}
+		const config2 = {
+			host: 'http://atguigu.com',
+			port: 33060,
+			name: 'atguigu.com',
+			pass: 'iloveyou',
+			test2: 'test2',
+		}
+		//两个对象合并之后,如果属性有重名的,后边的会覆盖前边的,如果属性不重名的话就不会
+		console.log(Object.assign(config1, config2))
+
+		//3. object.setPrototypeOf 设置原型对象 Object. getPrototypeof
+		const school = {
+			name: '尚硅谷',
+		}
+		const cities = {
+			xiaoqu: ['北京', '上海', '深圳'],
+		}
+		Object.setPrototypeOf(school, cities)
+		//cities 在 __proto__ 里面查找
+		console.log(school)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// ES6 引入了rest参数,用于获取函数的实参,用来代替arguments,获取实参的集合
+
+		/*
+		 ES5 获取实参的方式,返回的是一个对象形式的值
+		 function date(){
+		 console.log(arguments);
+		 }
+		 date(1,2,3);
+		 */
+
+		// rest 参数 ES6获取方式 返回的是一个数组形式的值
+		function date (...args) {
+			// filter some every map这些方法都可以直接使用
+			console.log(args)
+		}
+
+		date(1, 2, 3)
+
+		// 如果参数有多个,rest参数必须要放到参数最后,放到前面会报错
+		function fn (a, b, ...args) {
+			console.log(a, b, args)
+		}
+
+		// 1给了a 2给了b 3456给了...args
+		console.log(1, 2, 3, 4, 5, 6)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

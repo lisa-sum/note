@@ -1,0 +1,9 @@
+https://www.cnblogs.com/hszstudypy/p/11565244.html
+
+1. docker login
+
+2. docker tag <username> <image[tag]> <username>/<image>
+
+3. docker push <username>/<image>:[tag] 
+
+(tag:latest)

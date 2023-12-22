@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>trimStart 与 trimEnd</title>
+</head>
+<body>
+<script>
+	// ES5的trim方法清除字符串两边的空白
+
+	// ES10新增的顾名思义,trimStart清除左侧空白,trimEnd清除右侧空白
+	var str = '        123         '
+	console.log(str.trim())
+
+	str = '        123         '
+	console.log(str.trimStart())
+
+	str = '        123         '
+	console.log(str.trimEnd())
+</script>
+</body>
+</html>

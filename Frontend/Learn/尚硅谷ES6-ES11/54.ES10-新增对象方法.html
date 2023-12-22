@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Object.fromEbtries</title>
+</head>
+<body>
+<script>
+	// 这个方法用来创建一个对象,将二维数组或者map 转换为对象
+	var res = Object.fromEntries([
+		['name', '尚硅谷'],
+		['xueke', 'Java,大数据,前端,云计算'],
+	])
+
+	console.log(res)
+
+	// Map是一种对象型数据结构
+	var m = new Map()
+	var obj = {
+		a: 123,
+	}
+	m.set(obj, ['1', '2', '3'])
+	res = Object.fromEntries(m)
+	console.log(res)
+
+	// ES8 Object.entries 将对象转换为二维数组,数组的第一个数据键,第二个数据是值
+	var arr = Object.entries({
+		name: '尚硅谷',
+		xueke: 'Java,大数据,前端,云计算',
+	})
+	console.log(arr)
+</script>
+</body>
+</html>

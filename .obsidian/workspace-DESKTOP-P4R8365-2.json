@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "0091bda6ba9e379f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f90cca89ecbd566d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e8d2365c652a42c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Engineering/VersionManage/Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "56c935599082358d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a63e1418adbb81e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e22ddf2cded8ff2a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "802c1b746aa2afe8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7af9c989bc8b6625",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f7367d62ba798ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "a990c9abb414d85e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff1ba9a64a85e3c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Engineering/VersionManage/Git.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6a08ff11ffe4100",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Engineering/VersionManage/Git.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "686cde422f016f51",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "73920efdb7b8fb39",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Engineering/VersionManage/Git.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "e22ddf2cded8ff2a",
+  "lastOpenFiles": [
+    "Work/Operations/Docker/docker上传自己镜像.txt~RF10b4ca56.TMP",
+    "Work/experience/前端面试宝典V3.0.pdf~RF10aa1e19.TMP",
+    "Work/Engineering/VersionManage/修改hosts访问Github.txt~RF10a4859a.TMP",
+    "Work/Engineering/images/Pasted image 20230205052236.png~RF10a44e0f.TMP",
+    "Fonts/Windows/CorporateS-Medium.ttf",
+    "Fonts/Windows/AlcanteraSerif-gx4jp.ttf",
+    "Fonts/Windows/Cr.DejaVuSansMono.YaHei.ttf",
+    "Work/Operations/Docker/nginx.conf.md",
+    "Work/Operations/Docker/Docker安装MySQL.md",
+    "Work/Operations/Docker/Docker安装Gitlab.md",
+    "Work/Operations/Docker/Docker-Compose.md",
+    "Work/Operations/Docker/Docker 部署Goalng单体应用.md",
+    "Work/Operations/Docker/Docker 部署 微服务.md",
+    "Work/Operations/Docker/Docker 部署 Web.md",
+    "Work/Operations/Docker/Docker 部署 Redis.md",
+    "Work/Operations/Docker/Docker 源.md",
+    "Work/Operations/Docker/Docker 安装 Nginx.md",
+    "Work/Operations/Docker/Docker 安装 Mysql.md",
+    "Work/Operations/Docker/Docker 代理.md",
+    "Work/Operations/Docker/default.conf.md",
+    "Work/Frontend/Script/images/Pasted image 20230227174853.png",
+    "Work/Frontend/Script/images/Pasted image 20230227174836.png",
+    "Work/Frontend/Script/Web 自带UUID.md",
+    "Work/Frontend/Script/Vite 环境变量.md",
+    "Work/Frontend/Script/Redux Toolkit 浏览器本地缓存.md",
+    "Work/Frontend/Lib/流行库.md",
+    "Work/Frontend/Lib/curl.md",
+    "Work/experience/github/新建文本文档 (2).txt",
+    "Work/experience/面试题 (2).pdf",
+    "Work/experience/字节面试题.pdf",
+    "Work/experience/前端面试宝典V3.0.pdf",
+    "Work/Engineering/自签名SSL证书.md",
+    "Work/Engineering/基于GolangWeb项目的Gitlab CICD部署.md",
+    "Work/Engineering/VSCode.md",
+    "Work/Database/MySQL/命令.md",
+    "Work/Backend/Golang/获取路径.md",
+    "Work/Backend/Golang/登录.md",
+    "Work/Backend/Golang/环境变量.md",
+    "windows10虚拟桌面激活key.png",
+    "Fonts/Windows/新苹方iOS 12移植/Android/ttf格式/更多免费美化资源请关注微信公众号直接扫码，或搜njzyshare.png",
+    "Fonts/Windows/可商用字体/可商用字体/字体库安装教程.jpg",
+    "backs/QQ图片20220922190641.png",
+    "backs/QQ图片20220922190626.png",
+    "backs/2019-2020第二学期2班成绩.png",
+    "Camera Roll/本机照片/2023/05/20230510_013352739_iOS.jpg",
+    "Camera Roll/本机照片/2023/05/20230510_050811438_iOS.jpg"
+  ]
+}

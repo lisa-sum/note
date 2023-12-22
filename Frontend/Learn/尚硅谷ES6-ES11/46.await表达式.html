@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// 创建promise异步对象
+	const p = new Promise((resolve, reject) => {
+		resolve('用户数据')
+	})
+
+	const b = new Promise((resolve, reject) => {
+		reject('失败啦!')
+	})
+
+	// await要放在 async函数中,给不同异步函数分先后顺序
+	async function main () {
+		// 等待该异步任务执行结束再执行下一句
+		let result = await p
+		console.log(result)
+
+		// 将reject错误兜住
+		try {
+			let res = await b
+			// 失败结果传递给catch
+			return res
+		}
+		catch (err) {
+			console.log(err)
+		}
+
+	}
+
+	// async函数需要调用一下
+	main()
+</script>
+</body>
+</html>

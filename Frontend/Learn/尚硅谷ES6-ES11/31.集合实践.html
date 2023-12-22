@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		let arr = [6, 8, 5, 3, 2, 4, 7, 8, 2, 5, 4, 1, 2, 5, 9, 6, 3, 5]
+		//1.数组去重 + 排序(倒序/正序)
+		//new Set(arr)可以去重但是将数组转换成了类数组通过中括号[...arr]转换成真正的数组 利用sort()数组排序
+		let resul = [...new Set(arr)].sort((a, b) => {return b - a})
+		console.log(resul)
+
+		//2.交集获取两个数组中共有的元素
+		let arr2 = [4, 5, 6, 7, 8]
+		// 第一个数组的item为条件,去搜索第二个数组中has(item)也有的数据就是交集
+		let result = [...new Set(arr)].filter(item => new Set(arr2).has(item))
+		console.log(result)
+
+		//3.并集 先将两个数组合并但是有重复的,可以通过集合还有中括号...去重
+		let union = [...new Set([...arr, ...arr2])]
+		console.log(union)
+
+		//4.差集 以第一个数组的item为条件,进行has(item)也有的取反,交集的相反就是差集
+		let diff = [...new Set(arr)].filter(item => !(new Set(arr2).has(item)))
+		console.log(diff)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

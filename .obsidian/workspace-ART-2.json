@@ -1,0 +1,260 @@
+{
+  "main": {
+    "id": "42d4d279fdb43a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "33577421e9bb1060",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c56efeb7daa78d1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Docker/Docker安装Gitlab.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "459d66d97e7addea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Standard/git提交规范.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d75124e3246941d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/VersionManage/Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a565b97ef061a494",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Golang/go 编译打包指令.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "459b0e0cbf3b595d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Containerd/nerdctl 库.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b71c132ffd403bb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/VersionManage/Git连接到Github.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d023e161a7146b33",
+    "type": "split",
+    "children": [
+      {
+        "id": "a36b3ad038806a88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e21f8077a6f791e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cbb105e8159acc27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65388ddbd916e740",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 270.5
+  },
+  "right": {
+    "id": "8f99d051f780134a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bb38445580ca728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "186e7c605d411ac2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/VersionManage/Git连接到Github.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe2605c8d2def23d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/VersionManage/Git连接到Github.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f36211834ebfc380",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2e4b0538c16abdb2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/VersionManage/Git连接到Github.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "b71c132ffd403bb9",
+  "lastOpenFiles": [
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/说明.docx",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/民师院发〔2020〕1号 广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/9.广西民族师范学院本科毕业论文(设计)开题报告.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/民师院发〔2020〕1号 广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）.pdf",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/8.广西民族师范学院本科毕业论文(设计)封面.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/7.广西民族师范学院本科毕业论文(设计)答辩工作规程.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/5.广西民族师范学院本科毕业论文(设计)工作检查细则.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/6.广西民族师范学院本科毕业论文(设计)分类评分标准.doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/26.广西民族师范学院毕业论文(设计)工作总结(按专业填报).doc",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/25.广西民族师范学院本科优秀毕业论文(设计)推荐及汇总表.xlsx",
+    "backs/2022级毕业设计工作学校文件和附件/2022级毕业设计工作学校文件和附件/附件1-4/附件4：广西民族师范学院本科毕业论文（设计）工作管理规定（2020年修订）附件（1-26）/24.广西民族师范学院本科毕业论文(设计)答辩记录表.doc",
+    "Work/VersionManage/Git-Rococo.md",
+    "Work/VersionManage/Git.md",
+    "Work/Standard/编码格式选择.md",
+    "Work/工程化/Git.md",
+    "Work/工程化/commitlint.md",
+    "Work/工程化/ESLint.md",
+    "Work/工程化/Docker安装Gitlab.md",
+    "Work/工程化/CICD.md",
+    "Work/工程化/Prettier.md",
+    "Work/工程化/Style.md",
+    "Work/工程化/tsconfig.json.md",
+    "Work/工程化/VSCode.md",
+    "Work/工程化/BASH别名.md",
+    "Work/工程化/自签名SSL证书.md",
+    "Work/工程化/依赖包.md",
+    "Work/工程化/基于GolangWeb项目的Gitlab CICD部署.md",
+    "Work/Containerd/nerdctl 库.md",
+    "Work/Golang/go 编译打包指令.md",
+    "Work/Databases/Postgres/sql.md",
+    "Work/Docker/Docker安装Gitlab.md",
+    "Work/Shell/scp.md",
+    "连接 Windows.md",
+    "Work/Shell/rsync 文件传输.md",
+    "Work/Golang/Golang常用库.md",
+    "Work/Shell/shopt.md",
+    "Camera Roll_副本/IMG_0555.PNG",
+    "Camera Roll_副本/mmexport1664531950377.jpg",
+    "Camera Roll_副本/mmexport1622774398834.jpg",
+    "Camera Roll_副本/mmexport1651505657492.jpg",
+    "Camera Roll_副本/IMG_1139.JPG",
+    "Camera Roll_副本/IMG_0061(1).JPG",
+    "Camera Roll_副本/mmexport1650894700221.jpg",
+    "Camera Roll_副本/mmexport1648692077101.jpg",
+    "Camera Roll_副本/IMG_0421.JPG",
+    "Camera Roll_副本/mmexport1622805269248.jpg"
+  ]
+}

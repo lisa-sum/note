@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//ES6允许按照一定模式从数组和对象中提取值,对变量进行赋值
+		//这被称为解构赋值
+		//1.数组的解构
+		const F4 = ['小沈阳', '刘能', '赵四', '宋小宝']
+
+		let [xiao, liu, zhao, song] = F4 // ES6
+		// let xiao = F4[0]; // ES5
+		console.log(xiao)
+		console.log(liu)
+		console.log(zhao)
+		console.log(song)
+
+		//2.对象的解构
+		const ZHAO = {
+			name: '赵本山',
+			age: '不详',
+			xiaopin: function () {
+				console.log('演小品')
+			},
+		}
+
+		let { name, age, xiaopin } = ZHAO
+		console.log(name)
+		console.log(age)
+		console.log(xiaopin)
+		xiaopin()
+
+		// 当方法频繁调用的时候可以利用结构赋值让代码量更少,更规范简洁
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

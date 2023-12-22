@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// 1. 数组的合并,扩展运算符的应用场景
+		const kuaizi = [`王太利`, `肖央`]
+		const fenghuang = ['曾毅', '玲花']
+
+		// ES5合并数组的方法,输出的时候Array(1)
+		// const zxxpg = kuaizi.concat(fenghuang);
+
+		// ES6合并数组方法,输的时候直接输出(4)数组,扩展运算符可以把数组直接转换成逗号分隔的参数序列
+		const zxxpg = [...kuaizi, ...fenghuang]
+		console.log(zxxpg)
+
+		// 2.数组的克隆  浅拷贝
+		const sanzhihua = [`E`, `G`, `M`]
+		const sanyecao = [...sanzhihua]//相当于[`E`,`G`,`M`] 属于浅拷贝
+		console.log(sanyecao)
+
+		// 3.将伪数组转为真正的数组
+		window.onload = function () {
+			const divs = document.querySelectorAll('div')
+			console.log(typeof divs)// 此时是一个对象数据类型,查看__proto__
+
+			const divArr = [...divs]
+			console.log(divArr)// 此时转换成了真正的数组 也转换类数组为真数组
+		}
+	</script>
+</head>
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// ES6 引入新的声明字符串的方式  反引号``    '' ""
+
+		//1.声明一个模板字符串
+		let str = `ES6模板字符串`
+		console.log(str, typeof str)
+
+		//2.模板字符串的内容可以直接出现换行符,如果是普通字符串就会报错需要加起来
+		let str1 = `<ul>
+      <li>沈腾</li>
+      <li>玛丽</li>
+    </ul>`
+		console.log(str1)
+
+		//3.变量拼接 不需要 str + ''拼串了
+		let lovest = `魏翔`
+		let out = `${ lovest }是sb`
+		console.log(out)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

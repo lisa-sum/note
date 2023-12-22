@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// 生成器是ES6 提供的一种异步编程解决方案
+
+		//1.创建一个生成器函数
+		function * gen () {
+			// yield语句(新知识点,函数代码的分隔符) Python也有yield
+			// 它将函数代码切分成几块,三个分隔符产生四块代码,yield后的数据也会输出
+			console.log(111)
+			yield '一直没有耳朵'
+			console.log(222)
+			yield '一直没有尾巴'
+			console.log(333)
+			yield '真奇怪'
+			console.log(444)
+		}
+
+		//生成器函数并不会直接对函数内部的语句调用
+		//而是返回一个迭代(遍历)器对象
+		let iterator = gen()
+		console.log(iterator)
+
+		//遍历 可以直接拿到,因为已经内置iterator接口,不需要再开启接口
+		for (let v of gen()) {
+			console.log(v)
+		}
+
+		//借助于生成器对象里面的next对象来调用内部的语句
+		console.log(iterator.next())// 111 + yield
+		console.log(iterator.next())// 222 + yield
+		console.log(iterator.next())// 333 + yield
+		console.log(iterator.next())// 444 + undefined
+
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

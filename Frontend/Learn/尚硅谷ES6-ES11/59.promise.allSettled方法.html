@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES11 Promise.allSettled方法</title>
+</head>
+<body>
+<script>
+	// 声明两个promise组成一个数组
+	const p1 = new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('商品数据 -1')
+		}, 1000)
+	})
+
+	const p2 = new Promise((resolve, reject) => {
+		setTimeout(() => {
+			reject('出错啦')
+		}, 1000)
+	})
+
+	// 调用allSettled方法,改方法永远返回一个成功类型的promise值,数据在[[PromiseResult]]里面,status状态和一个结果值,fulfilled表示成功状态,rejected失败状态
+	const result = Promise.allSettled([p1, p2])
+	console.log(result)
+
+	// 调用all方法必须两个都成功才会正常输出,否则会报错
+	var res = Promise.all([p1, p2])
+	console.log(res)
+</script>
+</body>
+</html>

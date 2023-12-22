@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// ES5 in
+	let arr = [1, 2, 3, 4, 5]
+
+	console.log(1 in arr) //true
+	console.log('1' in arr) //true
+
+	// ES7 includes
+	console.log(arr.includes(1)) //true
+	console.log(arr.includes(1, 1)) //false 从索引为1开始判断
+	console.log(arr.includes('1')) //false
+
+	// ** 幂,次方
+	console.log(2 ** 10)
+	console.log(Math.pow(2, 10))
+</script>
+</body>
+</html>

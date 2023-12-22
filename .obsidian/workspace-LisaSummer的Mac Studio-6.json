@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "42d4d279fdb43a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4bc839ea703122d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "02013c9c0f588562",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/Docker/Docker 安装 Kafka.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "201e8b741241c6f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Engineering/Standard/git提交规范.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2b6b6377e72fcf41",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/kubernetes/k8s安装.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d023e161a7146b33",
+    "type": "split",
+    "children": [
+      {
+        "id": "a36b3ad038806a88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e21f8077a6f791e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cbb105e8159acc27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65388ddbd916e740",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 279.5
+  },
+  "right": {
+    "id": "8f99d051f780134a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bb38445580ca728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "186e7c605d411ac2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Operations/kubernetes/k8s安装.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe2605c8d2def23d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Operations/kubernetes/k8s安装.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f36211834ebfc380",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f19a9006febce00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Operations/kubernetes/k8s安装.md"
+              }
+            }
+          },
+          {
+            "id": "6ad4ef1b08e3490e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "2b6b6377e72fcf41",
+  "lastOpenFiles": [
+    "Work/Engineering/Standard/git提交规范.md",
+    "Work/Operations/Docker/Docker 安装 Nginx.md",
+    "Work/Operations/Docker/Docker 安装 Kafka.md",
+    "Work/Backend/Golang/第三方库/go-redis.md",
+    "Work/Backend/Golang/第三方库/AIR-LisaSummer的Mac Studio.md",
+    "Work/Backend/Golang/第三方库/mongodb.md",
+    "Work/Backend/Golang/第三方库/Redis.md",
+    "Work/Database/Redis/Redis.md",
+    "Work/Database/Postgres/安装.md",
+    "Work/Shell/连接超时重连.md~RF1642b10d.TMP",
+    "Work/Backend/Golang/第三方库/Go版本漏洞检查.md~RF1642adc1.TMP",
+    "Work/Operations/WireGarud.md~RF1642ad92.TMP",
+    "Work/Other/Jebt系列产品启动的进程错误.md~RF1642ad73.TMP",
+    "Work/Operations/Docker/Docker 安装Kafka.md~RF1642ad34.TMP",
+    "Work/Backend/Golang/第三方库/Go版本漏洞检查.md",
+    "Work/Operations/Docker/Docker-Compose.md",
+    "Work/Operations/WireGarud.md",
+    "Work/Operations/Containerd/nerdctl 库.md",
+    "Work/Backend/Golang/GOPROXY.md",
+    "Work/Backend/Golang/import.md",
+    "Work/Operations/Docker/Docker 安装 Gitlab.md",
+    "Work/Engineering/commitlint.md",
+    "Work/Engineering/CICD.md",
+    "Work/Engineering/BASH别名.md",
+    "Work/Engineering/自签名SSL证书.md",
+    "Work/Engineering/依赖包.md",
+    "Work/Engineering/基于GolangWeb项目的Gitlab CICD部署.md",
+    "Work/Engineering/Docker安装Gitlab.md",
+    "Work/Operations/Docker/Docker CLI.md",
+    "Work/Operations/Docker/Docker 部署 Redis.md",
+    "Work/Shell/连接超时重连.md",
+    "Pasted image 20230910220606.png",
+    "Pasted image 20230910220239.png",
+    "Pasted image 20230910215739.png",
+    "Pasted image 20230910215700.png",
+    "Work/Operations/未命名",
+    "Work/experience/字节面试题.pdf",
+    "Work/experience/面试题 (1).pdf",
+    "Work/Backend/MicrosoServer/protobuf",
+    "附件",
+    "Work/Database/Oracle/img/Pasted image 20220405155224.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154529.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154259.png",
+    "Work/Database/Oracle/img/Pasted image 20220401100837.png",
+    "Work/Database/Oracle/img/Pasted image 20220331093631.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205520.png"
+  ]
+}

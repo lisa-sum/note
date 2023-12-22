@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// ES6提供了新的数据结构Set(集合),它类似于数组,但成员的值都是唯一的集合实现了iterator接口,所以可以使用[扩展运算符」和for..of..进行遍历
+
+		//声明一个set
+		let s = new Set()
+
+		//我们可以在声明的时候传入初始参数,里面可以接收可迭代数据
+		let s2 = new Set(['大事儿', '小事儿', '坏事儿', '好事儿'])
+
+		//元素的个数 类似数组的length
+		console.log(s2.size)
+
+		//add 可以在数组中添加新的元素
+		s2.add('喜事儿')
+
+		//deleta可以删除一个数组元素
+		s2.delete('坏事儿')
+
+		//has监测一个数组里面是否含有元素,有则true,没有则false
+		console.log(s2.has('好事儿'))
+
+		//类型是object
+		console.log(s2, typeof s2)
+
+		//因为集合里面自带iterator接口我们可以使用for of进行遍历
+		for (let v of s2) {
+			//利用接口可以直接输出
+			console.log(v)
+		}
+
+		//clear 清空一个数组
+		s2.clear()
+		console.log(s2)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

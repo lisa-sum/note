@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//get 和 set
+		class Phone {
+			constructor () {
+				this.rice = []
+			}
+
+			//get通常对动态属性做一个封装,属性是随着数据的变化而变化的
+			get goods () {
+				return this.rice
+			}
+
+			//修改价格 set通常添加更多的控制和判断
+			set goods (rice) {
+				// this.rice.push(rice);
+				this.rice = rice
+			}
+		}
+
+		//实例化一个对象
+		let s = new Phone()
+
+		// 修改价格
+		s.rice = 123
+		console.log(s.rice)
+
+		// 修改儿子的年龄,儿子年龄默认18
+		let num = 18
+
+		class Family {
+			constructor (name) {
+				this.name = name
+			}
+
+			get age () {
+				return num
+			}
+
+			set age (value) {
+				num = value
+			}
+
+			work () {
+				console.log('my work')
+			}
+		}
+
+		let son = new Family('son')
+		son.age = 20
+		console.log(son.age)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

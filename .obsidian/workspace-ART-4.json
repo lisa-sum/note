@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "42d4d279fdb43a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4bc839ea703122d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a37fdb5d40b13c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Database/Redis/Redis Install.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "611baba2d6a73a6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Backend/Golang/第三方库/Redis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "123e98b7007f6861",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Mac M2/brew.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d023e161a7146b33",
+    "type": "split",
+    "children": [
+      {
+        "id": "a36b3ad038806a88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e21f8077a6f791e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cbb105e8159acc27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65388ddbd916e740",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 269.5
+  },
+  "right": {
+    "id": "8f99d051f780134a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bb38445580ca728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "186e7c605d411ac2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Mac M2/brew.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe2605c8d2def23d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Mac M2/brew.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f36211834ebfc380",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f19a9006febce00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Mac M2/brew.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "123e98b7007f6861",
+  "lastOpenFiles": [
+    "Work/Database/Redis/redis conf.md",
+    "附件",
+    "Work/Operations/Docker/Docker CLI.md",
+    "Work/Operations/Docker/Docker 源.md",
+    "Work/Backend/Golang/第三方库/AIR.md",
+    "Work/Backend/MicrosoServer/gRPC/gRPC.md",
+    "Work/Backend/Golang/第三方库/Redis.md",
+    "Work/Database/Redis/Redis Install.md",
+    "Work/Database/Redis/Redis.md",
+    "Work/Operations/Docker/Docker 部署 Redis.md",
+    "Work/Operations/Docker/Docker 安装 Nginx.md",
+    "Work/Operations/Docker/Docker 安装 Mysql.md",
+    "Work/Operations/Docker/nginx.conf.md",
+    "Work/Operations/Docker/OSS对象存储 Minio的搭建.md",
+    "Work/Operations/Docker/Docker 部署Goalng单体应用.md",
+    "Work/Operations/Docker/Docker 部署 Web.md",
+    "Work/Engineering/Standard/git提交规范.md",
+    "fsHelper.tmp",
+    "Work/Backend/Golang/第三方库/GORM/GORM.md",
+    "Work/Backend/Golang/第三方库/gin/中间件.md",
+    "Work/Backend/Golang/第三方库/gin/Gin-Swagger.md",
+    "Work/Backend/Golang/第三方库/gin/Gin REful API.md",
+    "Work/Backend/Golang/第三方库/gin/CORS.md",
+    "Work/Backend/Golang/第三方库/Golang常用库.md",
+    "Work/Backend/Golang/第三方库/切换开发与生产环境.md",
+    "Work/Backend/Golang/第三方库/viper.md",
+    "Work/Backend/Golang/第三方库/swaggo.md",
+    "Work/Backend/Golang/第三方库/GORM",
+    "Work/Backend/Golang/第三方库/gin",
+    "Work/Backend/Golang/第三方库",
+    "Work/Engineering/Standard/开源项目准则",
+    "redis.conf",
+    "Work/experience/conf/lixia.conf",
+    "Work/experience/conf/lixia-test.conf",
+    "Work/experience/conf",
+    "Work/Database/Oracle/img/Pasted image 20220405155224.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154529.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154259.png",
+    "Work/Database/Oracle/img/Pasted image 20220401100837.png",
+    "Work/Database/Oracle/img/Pasted image 20220331093631.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205520.png",
+    "Work/Database/Oracle/img/Pasted image 20220328210609.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205447.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205444.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205433.png"
+  ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//实例化 Promise 对象 ,resolve是成功执行函数,reject是失败执行函数
+		const p = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				let date = `数据库中的用户数据`
+
+				//resolve 当调用这个形参以后,对象会转换为成功状态
+				resolve(date)
+			}, 1000)
+		})
+
+		// 成功的时候传值then,失败的时候传值catch,或可不写直接,加函数,成功的形参一般叫value,如果调用resolve,则value所在函数生效
+		p.then(function (value) {
+			console.log(value)
+		}, function (reason) {
+			console.log(reason)
+		})
+
+		/*~~~~~~~ async和promise的两种链式调用方法 ~~~~~~~~~~~~~~~~~~~~~~*/
+
+		// async函数
+		async function fn () {
+			// 返回的如果是一个promise对象
+			return new Promise((resolve, reject) => {
+				resolve('成功的函数')
+			})
+		}
+
+		const result = fn()
+
+		// 第一种链式调用
+		result.then(value => {
+			console.log(value)
+			return new Promise((resolve, reject) => {
+				resolve('ok')
+			})
+		}).then(value => {
+			console.log(value)
+		}).catch(reason => {
+			console.warn(reason)
+		})
+
+		// 第二种链式调用
+		let pro = result.then(value => {
+			console.log(value)
+			return new Promise((resolve, reject) => {
+				resolve('失败的函数')
+			})
+		})
+
+		pro.then(reason => {
+			console.warn(reason)
+			return new Promise((resolve, reject) => {
+				reject('失败的链式')
+			})
+		}).catch(reason => {
+			console.warn(reason)
+		})
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

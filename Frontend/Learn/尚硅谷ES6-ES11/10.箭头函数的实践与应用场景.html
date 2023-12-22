@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<style>
+		div {
+			width      : 200px;
+			height     : 200px;
+			background : #58a;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			/*
+			 箭头函数的应用场景
+			 需求-1      点击div 2s后颜色变成 粉色
+			 需求-2      从数组中返回偶数的元素
+
+			 箭头函数适合与this无关的问题,定时器,数组的方法回调
+			 箭头函数不适合与this有关的回调,比如事件回调
+			 意思就是onclick后面的函数不适合跟箭头函数,而里面的函数都可
+			 以采用箭头函数
+
+			 {
+			 name:`尚硅谷`,
+			 getName:function(){
+			 比如这里也不适合采用箭头函数
+			 }
+			 }
+			 */
+			// 需求1 获取元素
+			let ad = document.querySelector('#ad')
+			//绑定事件
+			ad.addEventListener('click', function () {
+				//老办法解决获取到按钮内的this
+				//let _this = this;
+
+				//定时器  采用箭头函数this默认不再指向window而是上级作用域
+				setTimeout(() => {
+					//修改背景颜色 使用this(默认指向window)
+					this.style.background = 'pink'
+				}, 2000)
+			})
+		}
+
+		//需求-2    从数组中返回偶数的元素
+		const Arr = [24, 66, 31, 32, 46, 55, 66, 45, 15, 61, 65, 15, 61]
+		/*
+		 const Result = Arr.filter(function(item){
+		 if (item % 2 === 0){
+		 return true;
+		 }else{
+		 return false;
+		 }
+		 });
+		 */
+		//ES6简写方式
+		const Result = Arr.filter(item => item % 2 === 0)
+		console.log(Result)
+	</script>
+</head>
+
+<body>
+<div id="ad"></div>
+</body>
+
+</html>

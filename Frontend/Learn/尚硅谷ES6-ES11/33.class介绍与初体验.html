@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//手机
+		function Phone (rand, rice) {
+			this.rand = rand
+			this.rice = rice
+		}
+
+		//添加方法
+		Phone.prototype.call = function () {
+			console.log('打电话')
+		}
+
+		//实例化对象,共享方法
+		let Huawei = new Phone('华为', 5999)
+		Huawei.call()
+		console.log(Huawei)
+		let xiaomi = new Phone('小米', 5999)
+		xiaomi.call()
+		console.log(xiaomi)
+
+		//class
+		class Phonea {
+			//构造方法 名字不能修改
+			constructor (brand, price) {
+				this.brand = brand
+				this.price = price
+			}
+
+			//方法必须使用改语法,不能使用ES5的对象完整形式
+			call () {
+				console.log('我可以打电话')
+			}
+		}
+
+		let onePlus = new Phonea('1+', 1999)
+		onePlus.call()
+		console.log(onePlus)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

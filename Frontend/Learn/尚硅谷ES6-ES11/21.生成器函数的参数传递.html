@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//创建生成器函数
+		function * gen (arg) {
+			//创建函数代码的分隔符
+			console.log(arg)
+			let one = yield 111
+			console.log(one)
+			let two = yield 222
+			console.log(two)
+			let three = yield 333
+			console.log(three)
+		}
+
+		//执行获取迭代器对象
+		//对迭代器进行依次遍历,结果为true时停止遍历
+		var iterator = gen('aaa')
+		//next方法可以传入实参
+		console.log(iterator.next()) // aaa + yield 111
+		console.log(iterator.next('bbb')) // bbb + yield 222
+		console.log(iterator.next('ccc')) // ccc + yield 333
+		console.log(iterator.next('ddd')) // ddd + undefined
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

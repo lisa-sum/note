@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//获取 用户数据 订单数据 商品数据
+		function getUser () {
+			setTimeout(() => {
+				let date = `用户数据`
+				//调用next方法并且将数据通过yield返回出去
+				iterator.next(date)
+			}, 1000)
+		}
+
+		function getOrd () {
+			setTimeout(() => {
+				let date = `订单数据`
+				//调用next方法并且将数据通过yield返回出去
+				iterator.next(date)
+			}, 1000)
+		}
+
+		function getGoods () {
+			setTimeout(() => {
+				let date = `商品数据`
+				//调用next方法并且将数据通过yield返回出去
+				iterator.next(date)
+			}, 1000)
+		}
+
+		//创建一个生成器函数
+		function * gen () {
+			let user = yield getUser() // 调用户数据等一秒向下传递并输出
+			console.log(user)
+			let ord = yield getOrd()
+			console.log(ord)
+			let goods = yield getGoods()
+			console.log(goods)
+		}
+
+		//调用生成器函数
+		let iterator = gen()
+		iterator.next()
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

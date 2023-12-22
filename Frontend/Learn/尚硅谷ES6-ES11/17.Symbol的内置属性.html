@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		/*
+		 语法:
+		 对象[Symbol.方法] =
+
+		 除了定义自己使用的Symbol值以外,ES6还提供了11个内置的Symbol值,指向
+		 语言内部使用的方法
+		 */
+
+		//1. Symbol.hasInstance 检测一个对象是否是一个类的实例
+		class Person {
+			static [Symbol.hasInstance] (o) {
+				console.log(o)
+				console.log('检测数据类型')
+				// 也可以手动调整结果为false或者true
+				return false
+			}
+		}
+
+		let o = {
+			name: `o`,
+		}
+		// 检测o 是否是 Person类的实例对象,并且调用hasInstance函数
+		console.log(o instanceof Person)
+
+		// 2.Symbol.isConcatSpreadable不允许数组被扩展,true的时候数组会分为6个数据
+		// false的时候arr2的3个数据会传递到第四个值
+		const arr = [1, 2, 3]
+		const arr2 = [4, 5, 6]
+		arr2[Symbol.isConcatSpreadable] = false
+		console.log(...arr, ...arr2)
+		console.log(arr.concat(arr2))
+
+		// 3. Symbol.match 声明一个正则表达式,是不是应该是一个表达式
+		let re = /foo/
+		re[Symbol.match] = false
+		// str.startsWith 前缀字符串 endsWith后缀字符串 判断,括号中写正则会报错
+		'/foo/'.startsWith(re)
+		'/baz/'.endsWith(re)
+
+		// 4.1 with的用法
+		with (location) {
+			// 都是location.href location.hostname来调用的可以使用with简化
+			console.log(href, hostname)
+		}
+
+		var obj = {
+			fn () {
+				console.log('123')
+			},
+			name: '周杰伦',
+			age: 10,
+		}
+
+		let { fn, name, age } = obj
+		// fn(); // 解构的调用
+		// console.log(name,age);
+
+		with (obj) {
+			fn()
+			console.log(name, age)
+		}
+
+		// 4.2 Symbol.unscopables 该对象指定了使用with关键字时,哪些属性会被with环境排除
+		let obj2 = {
+			fn2 () {
+				console.log('123')
+			},
+			name2: '周杰伦',
+			age2: 10,
+		}
+
+		obj2[Symbol.unscopables] = {
+			name2: true,
+		}
+
+		with (obj2) {
+			try {
+				console.log(name2)
+			}
+			catch (err) {
+				console.warn('name2未找到')
+			}
+		}
+
+		// Symbol.replace 当该对象被str.replace(myObject)方法调用时,会返回该方法的返回值
+		// Symbol.replace方法会收到两个参数,第一个参数是replace方法正在作用的对象,上面例子是Hello,第二个参数是替换后的值
+		let x = {}
+
+		// rest参数获取到一个实参集合
+		x[Symbol.replace] = (...args) => console.log(args)
+		'Hello'.replace(x, 'World') // ["Hello", "World"]
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

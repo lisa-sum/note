@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<link href="../../尚硅谷H5C3/css/重置样式表.css" rel="stylesheet">
+	<script>
+		//接口地址 https://api.apiopen.top/getJoke
+		//使用Promise对这个Ajax请求进行封装
+		const p = new Promise((ressolve, reject) => {
+			//1. 创建对象
+			const xhr = new XMLHttpRequest()
+
+			//2.初始化
+			xhr.open('GET', 'https://api.apiopen.top/getJoke')
+
+			//3.发送
+			xhr.send()
+
+			//4.绑定事件,处理响应结果
+			xhr.onreadystatechange = function () {
+				// 判断
+				if (xhr.readyState == 4) {
+					//判断响应状态代码 200-229成功区间码
+					if (xhr.status >= 200 && xhr.status < 300) {
+						// 成功的返回值
+						ressolve(xhr.response)
+					}
+					else {
+						// 失败返回值
+						reject(xhr.status)
+					}
+				}
+			}
+		})
+
+		// 指定成功或者失败的返回值
+		p.then(function (value) {
+			value = JSON.parse(value)
+			console.log(value)
+		}, function (reason) {
+			console.log(reason)
+		})
+
+		// async的两种写法,比promise .then写法要简洁,通俗易懂
+		async function promise () {
+			const xhr = new XMLHttpRequest()
+			await xhr.open('GET', 'https://api.apiopen.top/getJoke')
+			await xhr.send()
+			// 绑定事件,处理响应结果
+			xhr.onreadystatechange = function () {
+				// 判断
+				if (xhr.readyState == 4) {
+					//判断响应状态代码 200-229成功区间码
+					if (xhr.status >= 200 && xhr.status < 300) {
+						let data = JSON.parse(xhr.response)
+						console.log(data)
+					}
+					else {
+						console.log(xhr.status)
+					}
+				}
+			}
+		}
+
+		promise()
+
+		// 通过fetch进行请求的async写法,比较推荐,写法简洁
+		async function fetch1 () {
+			const options = {
+				method: 'GET',
+			}
+			const res = await fetch('https://api.apiopen.top/getJoke', options)
+			const data = await res.json()
+			console.log(data)
+		}
+
+		fetch1()
+
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>flat 与 flatMap</title>
+</head>
+<body>
+<script>
+	// flat 有平的意思,将多维数组转化为低维数组,默认只降低一维度,如果要把四维数组转换成二维数组要传递参数2,代表2深度
+	var arr = [1, 2, 3, 4, [5, 6, [7, 8, 9]]]
+	console.log(arr.flat(2))
+
+	// flatMap,数组每项*10
+	arr = [1, 2, 3, 4]
+	// var res = arr.map(item => item * 10);
+
+	// 如果返回的结果是一个数组的话,可以通过flatMap转换成一维数组
+	var res = arr.flatMap(item => [item * 10])
+	console.log(res)
+</script>
+</body>
+</html>

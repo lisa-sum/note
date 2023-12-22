@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES11-私有属性</title>
+</head>
+<body>
+<script>
+	class Person {
+		// 公有属性
+		name
+		// 私有属性
+		#age
+		#weight
+
+		// 构造方法
+		constructor (name, age, weight) {
+			this.name = name
+			this.#age = age
+			this.#weight = weight
+		};
+
+		intro () {
+			console.log(this.name)
+			console.log(this.#age)
+			console.log(this.#weight)
+		}
+	}
+
+	// 实例化
+	var girl = new Person('晓红', 18, '45kg')
+	console.log(girl)
+
+	console.log(girl.name)
+	// 私有属性不可以直接被实例获取
+	// console.log(girl.#age);
+
+	// 但是可以通过方法获取
+	girl.intro()
+</script>
+</body>
+</html>

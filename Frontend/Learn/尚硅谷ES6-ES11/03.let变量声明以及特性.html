@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>let</title>
+	<script>
+		// 声明变量
+		let a
+		let b, c, d
+		// 声明并赋值
+		let e = 100
+		//同时声明多个并赋值
+		let f = 521, g = 'iloveyou', h = []
+
+		// 1.let变量不能重复声明
+		let star = '罗志祥'
+		//let star = '小猪'; 会报错 但是var就不会报错
+
+		// 2. ES6:块级作用域       ES5的作用域:全局作用域,函数作用域,eval作用域
+		{
+			let girl = '周扬青'
+		}
+		/*
+		 console.log(girl);这个变量未定义 如果是var 的话就不会报错
+		 if else do while for in switch这些语句后面的代码块都处于块级作用域
+		 */
+
+		// 3.不存在变量提升
+		// console.log(song); let会报错 var输出undefined
+		let song = '恋爱达人'
+
+		// 4.不影响内部作用域链,外部无法获取
+		{
+			let school = '尚硅谷'
+
+			function fn () {
+				console.log(school)
+			}
+
+			fn()
+		}
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// async函数
+	async function fn () {
+		// 返回的如果是一个promise对象
+		return new Promise((resolve, reject) => {
+			resolve('成功的函数')
+		})
+	}
+
+	const result = fn()
+
+	// 第一种链式调用
+	result.then(value => {
+		console.log(value)
+		return new Promise((resolve, reject) => {
+			resolve('ok')
+		})
+	}).then(value => {
+		console.log(value)
+	}).catch(reason => {
+		console.warn(reason)
+	})
+
+	// 第二种链式调用
+	let pro = result.then(value => {
+		console.log(value)
+		return new Promise((resolve, reject) => {
+			resolve('失败的函数')
+		})
+	})
+
+	pro.then(reason => {
+		console.warn(reason)
+		return new Promise((resolve, reject) => {
+			reject('失败的链式')
+		})
+	}).catch(reason => {
+		console.warn(reason)
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "6f5b3aa6b54bbac5",
+    "type": "split",
+    "children": [
+      {
+        "id": "f81146d7beb7681c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9032728cf394bae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/Jenkins部署项目和推送镜像和部署到k8s.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10545e34490dcf08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Shell/Ubuntu安装Docker.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f7b8e409c8c520c9",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20231023130214.png"
+              }
+            }
+          },
+          {
+            "id": "9540815df02f8f84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Backend/MicrosoServer/Kratos/埋坑.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d59293839e82c82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/Jenkins部署项目和推送镜像和部署到k8s.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d9c23f2a7ba982d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a58fa7d6d3f651a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3786874522ef803f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17cfab6fcfd44952",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9ff66b83d6b442e2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 326.5
+  },
+  "right": {
+    "id": "aebe579e27cdb94d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc09ec989dbcbc5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90e1acfb2a437e1f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Shell/Ubuntu安装Docker.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "018fa25c729b87c7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Shell/Ubuntu安装Docker.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6cf15375847afdc1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1fe531dc360a4cfc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "48a56d1146ad7185",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Shell/Ubuntu安装Docker.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "10545e34490dcf08",
+  "lastOpenFiles": [
+    "Work/Shell/Centos7环境安装Docker.md",
+    "Work/Shell/Ubuntu安装Docker.md",
+    "Work/Backend/Golang/携程安全检查.md",
+    "Work/Operations/Linux/NGINX二进制编译安装使用QUIC协议.md",
+    "Pasted image 20231023130252.png",
+    "Pasted image 20231023130214.png",
+    "Pasted image 20231023130723.png",
+    "Pasted image 20231023130249.png",
+    "Pasted image 20231023121740.png",
+    "Work/Operations/Jenkins部署项目和推送镜像和部署到k8s.md",
+    "Pasted image 20231023120832.png",
+    "Pasted image 20231023120317.png",
+    "Work/Operations/Docker/Docker 安装 Nginx.md",
+    "Work/Operations/Docker/default.conf.md",
+    "Work/Operations/kubernetes/Helm.md",
+    "Work/Operations/kubernetes/可视化Kuboard.md",
+    "Pasted image 20231021221910.png",
+    "Work/Operations/kubernetes/安装 Jenkins.md",
+    "Work/Operations/Docker/Docker 安装 Jenkins.md",
+    "Work/Operations/Docker/Docker 安装 Gitlab.md",
+    "Work/Backend/Golang/第三方库/webstoket.md",
+    "Work/Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
+    "Work/Operations/kubernetes/ReadHat系列安装Kubernetes.md",
+    "Work/Operations/kubernetes/指令.md",
+    "Work/Operations/kubernetes/Kubernetes.md",
+    "Work/Backend/Golang/第三方库/Casbin.md",
+    "Work/Backend/MicrosoServer/Kratos/埋坑.md",
+    "Work/Operations/Docker/Docker 安装 Kafka.md",
+    "Work/Operations/Docker/Docker 代理.md",
+    "Work/Backend/MicrosoServer/protobuf/处理Null值.md",
+    "Pasted image 20231013110228.png",
+    "Work/Backend/MicrosoServer/protobuf/proto文件参数校验.md",
+    "Work/Backend/MicrosoServer/protobuf/Protocol buf.md",
+    "Work/Operations/Docker/Dockerfile.md",
+    "Work/Operations/Docker/Docker CLI.md",
+    "rocky.pem",
+    "Work/Frontend/vite",
+    "Work/Operations/Linux"
+  ]
+}

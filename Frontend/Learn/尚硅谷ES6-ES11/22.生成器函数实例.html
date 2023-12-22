@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// 异步单线程编程  文件操作(I/O) 网络操作(ajax,request) 数据库生成器函数是专门针对于解决异步编程的新的解决方案
+
+		function one () {
+			//延时调用
+			setTimeout(() => {
+				console.log(111)
+				//外部调用了这个函数以后,通过下行调用启用tow函数
+				iterator.next()
+			}, 1000)
+		}
+
+		function two () {
+			setTimeout(() => {
+				console.log(222)
+				iterator.next()
+			}, 2000)
+		}
+
+		function three () {
+			setTimeout(() => {
+				console.log(333)
+				iterator.next()
+			}, 3000)
+		}
+
+		//创建一个生成器函数
+		function * gen () {
+			console.log('1s')
+			yield one()
+			console.log('2s')
+			yield two()
+			console.log('3s')
+			yield three()
+		}
+
+		//调用生成器函数,利用生成器的异步来解决无限回调
+		let iterator = gen()
+		// 注意为什么这里直接掉一次就能看见全部,是因为在yield调用的函数内调用了next()
+		iterator.next()
+
+		//1s后控制台输出 111    2s后输出 222    3s后输出 333
+		/*
+		 这个现象称为回调地狱,这是没有异步解决方案的唯一写法
+		 setTimeout(() => {
+		 console.log(111);
+		 setTimeout(() => {
+		 console.log(222);
+		 setTimeout(() => {
+		 console.log(333);
+		 }, 3000);
+		 }, 2000);
+		 }, 1000);
+		 */
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

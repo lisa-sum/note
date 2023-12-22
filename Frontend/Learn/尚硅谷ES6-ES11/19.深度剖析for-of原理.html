@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//声明一个对象
+		const banji = {
+			name: '终极一班',
+			stus: [
+				'ning',
+				'ming',
+				'tian',
+				'knight',
+			],
+			[Symbol.iterator] () {
+				//声明一个索引变量
+				let index = 0
+				//报错undefined is not an function 所以添加一个next函数
+
+				//保存this  let _this = this; 直接换箭头函数
+				return {
+					//报错undefined is not an object,没有包含done和vlue的对象
+
+					//使用箭头函数
+					next: () => {
+						if (index < this.stus.length) {
+							const result = { value: this.stus[index], done: false }
+							//下标自增
+							index++
+							//返回结果
+							return result
+							//else大于数组长度
+						}
+						else {
+							return { value: undefined, done: true }
+						}
+					},
+				}
+			},
+
+		}
+
+		//遍历这个对象,并取出数组内的值而不是索引,所以此时不能采用for in遍历
+		//并不能直接遍历,必须要有iterator接口
+		for (let v of banji) {
+			console.log(v)
+		}
+		let iterator = banji[Symbol.iterator]()
+		console.log(iterator.next())
+		console.log(iterator.next())
+		console.log(iterator.next())
+		console.log(iterator.next())
+
+		//在原对象没有开启接口同意外部遍历时,任何外部对象都不能遍历
+		//banji.stus.forEach();
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>catch方法</title>
+</head>
+
+<body>
+<script>
+	//创建一个promise对象 resolve成功  reject失败
+	// 这里主要演示调用失败函数的三种方法,与成功同理可得
+	const p = new Promise((resolve, reject) => {
+		//创建一个延时调用
+		setTimeout(() => {
+			//设置p的状态为失败,并设置失败返回值
+			reject('失败的函数')
+			// resolve('成功的函数')
+		})
+	})
+
+	// then接收成功时候的回调,catch接收失败时的回调
+	p.then(value => {
+		console.log(value)
+	}).catch(reason => {
+		console.warn(reason)
+	})
+
+	// 当然也可以这样写不写catch
+	p.then(value => {
+		console.log(value)
+	}, reason => {
+		console.warn(reason)
+	})
+
+	// p.then(value =>{
+	//   console.log(value);
+	// });
+
+	//通过p.catch方法来接收失败时的回调
+	p.catch(function (reason) {
+		console.warn(reason)
+	})
+</script>
+</body>
+
+</html>

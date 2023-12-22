@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		class Phone {
+			//构造方法
+			constructor (brand, price) {
+				this.brand = brand
+				this.price = price
+			}
+
+			//父类成员的属性
+			call () {
+				console.log('我可以打电话!!')
+			}
+		}
+
+		//extends 可以继承父类
+		class SmartPhone extends Phone {
+			//构造方法
+			constructor (brand, price, color, size) {
+				//super继承父类中的属性
+				super(brand, price)
+				//创造一些子类独有的方法
+				this.color = color
+				this.size = size
+			}
+
+			//子类独有的方法
+			photo () {
+				console.log('拍照')
+			}
+
+			playGame () {
+				console.log('玩游戏')
+			}
+
+			//子类对父类方法的重写,如果子类有,优先级问题不会去调用父类同名方法
+			call () {
+				console.log('我可以进行视频通话')
+			}
+		}
+
+		// 实例化子类
+		const xiaomi = new SmartPhone('小米', 2888, '黑色', '6.6inch')
+		console.log(xiaomi)
+
+		// 继承来的方法
+		xiaomi.call()
+
+		// 子类独有的方法
+		xiaomi.photo()
+		xiaomi.playGame()
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

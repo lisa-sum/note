@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		/*
+		 迭代器(Iterator)是一种接口,为各种不同的数据结构提供统一的访问机制
+		 1. ES6创造了一种新的遍历命令for..of循环,Iterator接口主要供for..of使用
+		 2. 原生可以for..of遍历的数据(因为具备iterator接口)
+
+		 Array 数组
+		 Arguments 实参数组
+		 Set 部署iterator的数组
+		 Map 对象,键可以为任意数据类型
+		 String 字符串
+		 NodeList DOM对象节点
+		 TypedArray 二进制数据数组
+
+		 这些数据都可以部署Iterator接口然后采用for...of进行遍历(迭代)
+		 重点: Iterator接口 就是Symbol对象里面的一个属性
+
+		 任何数据结构只要部署lterator接口,就可以完成遍历操作,对象默认不可以被for..of遍历
+		 */
+
+		// for...of遍历对象时需要给对象开启迭代器
+		const xiyou = {
+			name: '孙悟空',
+			age: 18,
+			gender: '男',
+			ad: '花果山',
+		}
+
+		const num = [1, 2, 3, 4, 5]
+
+		// 给这个对象添加这个方法使对象可以被迭代,也可以添加到Object.prototype使所有对象有效
+		xiyou.__proto__[Symbol.iterator] = function * () {
+			let index = 0
+			let arr = Object.entries(this)
+			let length = arr.length
+			while (true) {
+				if (index >= length) {
+					return false
+				}
+				else {
+					let key = arr[index] && arr[index][0]
+					let val = arr[index] && arr[index][1]
+					let result = { [key]: val }
+					index++
+					yield result
+				}
+			}
+		}
+
+		// 使用for...of遍历这个数组,for...of和for..in的区别for...in返回的是索引值(键名),但是for...of直接返回数
+		// 组内的数据(键值)
+		for (let v of xiyou) {
+			console.log(v, '遍历对象')
+		}
+
+		// 数组不需要添加接口也可以直接for...of循环
+		for (let b of num) {
+			console.log(b, '遍历数组')
+		}
+
+		// 探索工作原理
+		// 1. 数据结构的起始位置的指针对象由xiyou内部__proto__的Symbol(Symbol.iterator): ƒ values() 创建
+		console.log(xiyou)
+
+		// 2. 对xiyou对象开启迭代器,并赋值给iterator对象
+		let iterator = xiyou[Symbol.iterator]()
+		// 3. 每调用next方法返回一个包含value和done属性的对象
+		console.log(iterator.next(), 'iterator')
+		console.log(iterator.next(), 'iterator')
+		console.log(iterator.next(), 'iterator')
+		console.log(iterator.next(), 'iterator')
+		console.log(iterator.next(), 'iterator')
+
+		// 创建一个缓冲区
+		let buffer = new ArrayBuffer(32)
+
+		// 查看这个TypedArray
+		let idView = new Uint8Array(buffer, 0, 32)
+		console.log(idView, 'TypedArray')
+		// 将二进制数据组转换成真正的数组
+		let normalArray = Array.apply([], idView)
+		console.log(normalArray, 'TypedArray')
+
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

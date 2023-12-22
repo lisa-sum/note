@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES9正则扩展-命名捕获分组</title>
+</head>
+<body>
+<script>
+	// 多行获取,g全局 和while循环缺一不可
+	// .非换行符的任意单个字符, *表示0个或者多个 , ?表示非贪婪模式
+	let str = `
+      <a href="http://www.atguigu.com">尚硅谷</a>
+      <a href="http://www.baidu.com">百度</a>
+      <a href="http://www.bilibili.com">哔哩哔哩</a>
+    `
+
+	// 获取url与标签文本
+	const reg = /<a href="(.*?)">(.*?)<\/a>/g
+	let result
+	// 执行
+	while (result = reg.exec(str)) {
+		console.log(result[1], result[2])
+	}
+
+	// 单行获取
+	var str2 = '<a href="http://mp.weixin.qq.com">单行获取</a>'
+	var reg2 = /<a href="(.*?)">(.*?)<\/a>/
+	var res = reg2.exec(str2)
+	console.log(res)
+
+	// ?<url>.* 数据重命名, 显示在groups里面
+	str2 = '<a href="http://mp.weixin.qq.com">单行获取</a>'
+	reg2 = /<a href="(?<url>.*)">(?<text>.*)<\/a>/
+	res = reg2.exec(str2)
+	console.log(res.groups)
+
+	// 讲解贪婪模式和非贪婪模式的区别
+	// 例子一
+	console.log(/(d)(\w+)/.exec('dxxxdxxxd')[2])// xxxdxxxd
+	console.log(/(d)(\w+?)/.exec('dxxxdxxxd')[2])// x
+
+	console.log(/(d)(\w+)(d)/.exec('dxxxdxxxd')[2])// xxxdxxx
+	console.log(/(d)(\w+?)(d)/.exec('dxxxdxxxd')[2])// xxx
+
+	// 例子二,一个是最远的匹配,一个是最近的匹配
+	str2 = '<td><p>aa</p></td><td><p>bb</p></td>'
+	console.log(/<td>(.*)<\/td>/.exec(str2)[1])// <p>aa</p></td> <td><p>bb</p>
+	console.log(/<td>(.*?)<\/td>/.exec(str2)[1])// <p>aa</p>
+</script>
+</body>
+</html>

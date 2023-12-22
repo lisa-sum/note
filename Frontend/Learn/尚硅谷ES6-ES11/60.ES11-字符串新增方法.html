@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>String.prototype.matchAll</title>
+</head>
+<body>
+<script>
+	var str = `
+      <ul>
+        <li>
+          <a>肖申克的救赎</a>
+          <p>上映日期: 1994-09-10</p>
+        </li>
+        <li>
+          <a>阿甘正传</a>
+          <p>上映日期: 1994-07-06</p>
+        </li>
+      </ul>
+    `
+
+	// 需求: 把每一个电影名称和上映时间提取出来, 比ES9的dotAll模式更加简单方便
+	var reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+
+	// 调用方法,返回的结果是一个iterator的可迭代对象,可以利用for...of 和扩展运算符来提取
+	const result = str.matchAll(reg)
+	// 第一种办法
+	for (let v of result) {
+		console.log(v)
+	}
+
+	// 第二种办法
+	const arr = [...result]
+	console.log(arr)
+</script>
+</body>
+</html>

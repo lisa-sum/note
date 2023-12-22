@@ -1,0 +1,254 @@
+{
+  "main": {
+    "id": "6f5b3aa6b54bbac5",
+    "type": "split",
+    "children": [
+      {
+        "id": "f81146d7beb7681c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9032728cf394bae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/kubernetes/Minikube.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10545e34490dcf08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/DevOps/Prometheus/Kubernetes 部署 OpenTelemetry Collector Trace到Jaeger示例.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9540815df02f8f84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/kubernetes/指令.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d59293839e82c82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/kubernetes/Helm.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f679065000abdb43",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d9c23f2a7ba982d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a58fa7d6d3f651a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3786874522ef803f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17cfab6fcfd44952",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9ff66b83d6b442e2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.5
+  },
+  "right": {
+    "id": "aebe579e27cdb94d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc09ec989dbcbc5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90e1acfb2a437e1f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/DevOps/Prometheus/Kubernetes 部署 OpenTelemetry Collector Trace到Jaeger示例.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "018fa25c729b87c7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/DevOps/Prometheus/Kubernetes 部署 OpenTelemetry Collector Trace到Jaeger示例.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6cf15375847afdc1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1fe531dc360a4cfc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "48a56d1146ad7185",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/DevOps/Prometheus/Kubernetes 部署 OpenTelemetry Collector Trace到Jaeger示例.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "10545e34490dcf08",
+  "lastOpenFiles": [
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231114103025.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231114102426.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231113172147.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231106145014.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231106143945.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231106143616.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/images/Pasted image 20231106143401.png",
+    "Work/DevOps/OpenTelemetry/images/Pasted image 20231120122442.png",
+    "Work/DevOps/OpenTelemetry/images/Pasted image 20231120120924.png",
+    "Work/DevOps/OpenTelemetry/Prometheus/Kubernetes 部署 OpenTelemetry Collector到后端示例.md",
+    "Work/DevOps/OpenTelemetry/Prometheus/images",
+    "Work/DevOps/OpenTelemetry/images/Pasted image 20231120120915.png",
+    "Work/DevOps/OpenTelemetry/概念.md",
+    "Work/DevOps/OpenTelemetry/在Golang使用OpenTelemetry Go SDK和API创建和配置指标链路日志遥测数据并用OpenTelemetry Collector导出到Prometheus Jaeger和Loki.md",
+    "Work/DevOps/OpenTelemetry/Prometheus",
+    "Work/DevOps/OpenTelemetry/images",
+    "Work/DevOps/OpenTelemetry",
+    "Work/Operations/kubernetes/MicroK8s/CLI.md",
+    "Work/Operations/kubernetes/MicroK8s",
+    "Work/Operations/crictl/安装.md",
+    "Work/Operations/crictl/CLI.md",
+    "Work/Operations/crictl",
+    "Work/Operations/kubernetes/指令.md",
+    "Work/Operations/kubernetes/Minikube.md",
+    "Work/DevOps/Prometheus/Kubernetes 部署 OpenTelemetry Collector Trace到Jaeger示例.md",
+    "Work/DevOps/Prometheus/images/Pasted image 20231113172147.png",
+    "Work/DevOps/在Golang使用OpenTelemetry Go SDK和API创建和配置指标链路日志遥测数据并用OpenTelemetry Collector导出到Prometheus Jaeger和Loki.md",
+    "Work/Operations/Containerd/nerdctl 库.md",
+    "Work/Operations/kubernetes/未命名.md",
+    "Work/Operations/kubernetes/Helm.md",
+    "Work/Operations/Containerd/指令.md",
+    "Work/Operations/kubernetes/istioctl 安装集成配置 Jarger.md",
+    "Work/DevOps/Prometheus/images",
+    "Work/DevOps/Prometheus",
+    "Work/DevOps",
+    "Work/Operations/kubernetes/飞书告警.md",
+    "Work/Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
+    "Work/Operations/Jenkins部署项目和推送镜像和部署到k8s.md",
+    "Work/Backend/Golang/技巧.md",
+    "Work/Operations/kubernetes/Kubernetes 安装 Jaeger.md",
+    "Work/Backend/MicrosoServer/gRPC/gRPC.md",
+    "Work/Operations/kubernetes/部署Kubernetes.md",
+    "Work/Backend/Golang/第三方库/GORM/GORM.md",
+    "Work/Operations/Linux/NGINX二进制编译安装使用QUIC协议.md",
+    "Work/Backend/Golang/第三方库/切换开发与生产环境.md",
+    "rocky.pem"
+  ]
+}

@@ -1,0 +1,14 @@
+# PNPM
+#PackageManage #命令
+
+升级
+
+pnpm add -g pnpm
+
+列出全局包
+
+pnpm ls -g
+
+卸载
+
+pnpm rm <page>

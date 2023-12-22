@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "42d4d279fdb43a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4bc839ea703122d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a37fdb5d40b13c8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "611baba2d6a73a6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Operations/Docker/OSS对象存储 Minio的搭建.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "123e98b7007f6861",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Backend/MicrosoServer/gRPC/gRPC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c2b0656c1c874bf3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Engineering/Standard/git提交规范.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d023e161a7146b33",
+    "type": "split",
+    "children": [
+      {
+        "id": "a36b3ad038806a88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e21f8077a6f791e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cbb105e8159acc27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65388ddbd916e740",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 269.5
+  },
+  "right": {
+    "id": "8f99d051f780134a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bb38445580ca728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "186e7c605d411ac2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Engineering/Standard/git提交规范.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe2605c8d2def23d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Engineering/Standard/git提交规范.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f36211834ebfc380",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f19a9006febce00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Engineering/Standard/git提交规范.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "c2b0656c1c874bf3",
+  "lastOpenFiles": [
+    "Work/Engineering/VersionManage/Git.md",
+    "Work/Operations/Docker/OSS对象存储 Minio的搭建.md",
+    "Work/Backend/MicrosoServer/gRPC/gRPC.md",
+    "Work/Database/Redis/redis conf.md",
+    "Work/Database/Redis/Redis Install.md",
+    "Work/Database/Redis/Redis.md",
+    "redis.conf",
+    "Work/Backend/MicrosoServer/Protoc.md",
+    "Work/experience/conf/lixia.conf",
+    "Work/experience/conf/lixia-test.conf",
+    "Work/experience/conf",
+    "Work/Backend/Golang/install.md",
+    "Work/Shell/Linux 22020324.md",
+    "Work/Shell/CMD,PowerSehll,Git终端开启代理.md",
+    "Work/Frontend/Lib/Vite 环境变量设置.md",
+    "Work/Backend/Golang/Kratos.md",
+    "Work/Shell/rsync 文件传输.md",
+    "Work/Shell/Makefile.md",
+    "Work/Other/个人github主页.md",
+    "Work/Operations/Docker/CentOS安装Docker.md",
+    "Work/Frontend/Lib/docusaurus.md",
+    "Work/Frontend/Lib/未命名.md",
+    "Work/Standard/git提交规范.md",
+    "Work/Database/Oracle/必备C++安装包/vcredist_x86.exe",
+    "Work/Database/Oracle/必备C++安装包/vcredist_x64.exe",
+    "Work/Database/Oracle/必备C++安装包/vc2010redist_x64.exe",
+    "Work/Database/Oracle/必备C++安装包/VC_redist.x86.exe",
+    "Work/Database/Oracle/必备C++安装包/VC_redist.x64.exe",
+    "Work/Database/Oracle/img/设计稿.md",
+    "Work/Database/Oracle/img/Pasted image 20220405155224.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154529.png",
+    "Work/Database/Oracle/img/Pasted image 20220405154259.png",
+    "Work/Database/Oracle/img/Pasted image 20220401100837.png",
+    "Work/Database/Oracle/img/Pasted image 20220331093631.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205520.png",
+    "Work/Database/Oracle/img/Pasted image 20220328210609.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205447.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205444.png",
+    "Work/Database/Oracle/img/Pasted image 20220328205433.png",
+    "Work/Database/Oracle/img/2019_Book_BeginningOracleSQLForOracleDat.pdf",
+    "Work/Database/Postgres/安装.md",
+    "Work/Database/Postgres/sql.md",
+    "Work/Database/Oracle/ORACLE 18C 完整安装教程.md",
+    "Work/Database/Oracle/Node.js连接Oracle.md",
+    "Work/Database/Oracle/0405.md",
+    "Work/Database/MySQL/命令.md"
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES9 dotAll模式</title>
+</head>
+<body>
+<script>
+	// dot意思有点的意思 . 也就是正则的元字符,除换行符的任意单个字符
+	var str = `
+      <ul>
+        <li>
+          <a>肖申克的救赎</a>
+          <p>上映日期: 1994-09-10</p>
+        </li>
+        <li>
+          <a>阿甘正传</a>
+          <p>上映日期: 1994-07-06</p>
+        </li>
+      </ul>
+    `
+
+	// 需求: 把li里面的电影名称和上映日期存储到对象中
+	// var reg = /<li>\s+<a>(.*?)<\/a>\s+<p>(.*?)<\/p>/; // 疯狂的加\s+,dotAll的出现解决了
+
+	// 后面加个s代表了dotAll模式,可以使用.*?来取代传统\s+写法 , 循环匹配多个时g全局和while写法缺一不可,此写法为最简写法
+	var reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+	var res
+	let data = []
+	while (res = reg.exec(str)) {
+		data.push({ title: res[1], pubtime: res[2] })
+	}
+	console.log(data)
+</script>
+</body>
+</html>

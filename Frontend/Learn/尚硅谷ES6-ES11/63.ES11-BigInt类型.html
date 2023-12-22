@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ES11 BigInt大整数</title>
+</head>
+<body>
+<script>
+	// 大整数型
+	var n = 521n
+	console.log(n, typeof (n))
+
+	// 函数
+	n = 123
+	console.log(BigInt(n))
+	// console.log(BigInt(1.2)); //不能传一个浮点数
+
+	// 大数值运算
+	var max = Number.MAX_SAFE_INTEGER
+	console.log(max)
+	console.log(max + 1)
+	console.log(max + 2) // +2以后开始无法再增
+
+	// BigInt可以突破最大数值限制,并且只能和BigInt相加
+	console.log(BigInt(max))
+	console.log(BigInt(max) + BigInt(1))
+	console.log(BigInt(max) + BigInt(2))
+</script>
+</body>
+</html>

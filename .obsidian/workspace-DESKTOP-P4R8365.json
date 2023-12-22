@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "0091bda6ba9e379f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f90cca89ecbd566d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e8d2365c652a42c3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "56c935599082358d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a63e1418adbb81e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e22ddf2cded8ff2a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "802c1b746aa2afe8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7af9c989bc8b6625",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f7367d62ba798ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "a990c9abb414d85e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff1ba9a64a85e3c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6a08ff11ffe4100",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "686cde422f016f51",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "73920efdb7b8fb39",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "e8d2365c652a42c3",
+  "lastOpenFiles": [
+    "Work/Database/MySQL/MySQL安装教程.md",
+    "Work/Database/MySQL",
+    "Work/Database",
+    "Work/experience/github/新建文本文档.txt",
+    "Work/experience/github",
+    "Work/experience/面试题 (1).pdf",
+    "Work/experience",
+    "Work",
+    "backs/data/银行卡.xlsx",
+    "backs/data",
+    "backs",
+    "Fonts/Windows/可商用字体/可商用字体/淘宝可用华康字体46款(只能淘宝用）/天猫字体公告.png",
+    "Fonts/Windows/新苹方iOS 12移植/Android/原生安卓专用卡刷包/了解更多.png",
+    "Fonts/Android/Magisk模块字体/阿丽达黑体/Android/原生、一加专用卡刷/更多免费美化资源请关注微信公众号直接扫码，或搜njzyshare.png"
+  ]
+}

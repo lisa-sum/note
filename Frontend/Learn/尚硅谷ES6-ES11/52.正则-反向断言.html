@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+<a href="https://www.baidu.com"></a>
+<script>
+	// 声明字符串
+	var str = 'JS5211314你知道么555啦啦啦'
+
+	// 正向断言,提取啦之前的数字
+	var reg = /\d+(?=啦)/
+	var res = reg.exec(str)
+	console.log(res[0])
+
+	str = '5min.jpeg45646546465.jpeg'
+	reg = /(?<=5).*?(?=\.[jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga])/
+	console.log(reg.exec(str)[0])
+
+	// 爬取链接
+	str = `<a href="https://www.baidu.com"></a>`
+	reg = /(?<=href=").*?(?="><\/a>)/
+	console.log(reg.exec(str)[0])
+
+	// 反向断言,如果匹配到么以后开始截取数字
+	str = '你吃饭了么123456'
+	reg = /(?<=么)\d+/
+	res = reg.exec(str)
+	console.log(res[0])
+</script>
+</body>
+</html>

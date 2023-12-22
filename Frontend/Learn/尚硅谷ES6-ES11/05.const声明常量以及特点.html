@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>const 定义常量</title>
+</head>
+
+<body>
+<script>
+	//const定义一个常量
+	const SCHOOL = '尚硅谷'
+
+	// 1.一定要赋予初始值
+	// const A; 会报错
+
+	// 2.常量命名需要使用大写(行业规则/潜规则)
+	const a = 100 //不能这样写
+
+	// 3.常量的值不能修改
+	try {
+		SCHOOL = 'ATGUIGU' //会报错
+	}
+	catch (err) {
+
+	}
+
+	// 4.块级作用域
+	// 常见块级作用域比如 if else do while for in switch这些语句的后面的花括号都处于块级作用域中
+	{
+		const PLAYER = 'The shy'
+	}
+
+	try {
+		console.log(PLAYER) //无法找到该数据
+	}
+	catch (err) {
+
+	}
+
+	// 对于数组和对象的元素的添加删除,不算做对常量的修改,不会报错,语法中允许的
+	const TEAM = ['The shy', 'ning', 'rookie', 'jackeylove', 'baolan']
+	TEAM.push('duke')
+</script>
+</body>
+
+</html>

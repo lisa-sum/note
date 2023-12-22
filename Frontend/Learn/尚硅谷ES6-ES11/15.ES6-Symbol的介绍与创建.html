@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		/*
+		 ES6引入一种新的原始数据类型Symbol,表示独一无二的值,它是JavaScript语言的第七种数据类型,是一种类似于字符串的数据类型,类似但不是
+
+		 Symbol 特点
+		 1. Symbol的值是唯一的,用来解决命名冲突的问题
+		 2. Symbol的值不能与其他数据进行运算
+		 3. Symbol定义的对象属性不能使用for..in循环遍历,但是可以使用
+		 Reflect.ownKeys来获取对象的所有键名
+
+		 ES5的对象属性名都是字符串,这容易造成属性名的冲突,比如,你使用了一个他人
+		 提供的对象,但又想为这个对象添加新的方法(mixin 模式),新方法的名字就有可
+		 能与现有方法产生冲突,如果有一种机制,保证每个属性的名字都是独一无二的就好
+		 了,这样就从根本上防止属性名的冲突,这就是ES6引入Symbol的原因
+		 */
+
+		// 1.创建一个Symbol类型的数据
+		let s = Symbol()
+		console.log(s, typeof s)
+
+		// 2.Symbol的唯一性
+		let s2 = Symbol(`尚硅谷`)
+		let s3 = Symbol(`尚硅谷`)
+		// 并不相等,因为Symbol具有唯一性 返回false
+		console.log(s2 == s3)
+
+		// 3.Symbol.for 创建一个函数对象
+		let s4 = Symbol.for(`尚硅谷`)
+		let s5 = Symbol.for(`尚硅谷`)
+		console.log(s4, typeof s4)
+		// true 这个函数对象会返回true
+		console.log(s4 == s5)
+
+		// 不能与其他数据进行运算 > == + - * /都不可用甚至也不能和自己相加
+		// let result = s > 100;
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

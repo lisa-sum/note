@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		//向对象中添加方法 up down
+		let game = {
+			up () {
+				console.log('修改前up')
+			},
+			down () {
+				console.log('修改前down')
+			},
+		}
+		// 我们不知道game里面有没有up有没有down我们只想添加up和down但是不想修改此时就采用Symbol进行数据添加
+		let methods = {
+			up: Symbol(),
+			down: Symbol(),
+		}
+
+		// 添加这两个函数,因为函数事先存在所以修改[添加]失败
+		game[methods.up] = function () {
+			console.log('修改后的函数up')
+		}
+		game[methods.down] = function () {
+			console.log('修改后的函数down')
+		}
+
+		// 发现函数并没有被修改
+		let { up, down } = game
+		up()
+		down()
+
+		// --------------------------------------------------------------------------------
+		// 第二种添加方法,这种方法目前不知道怎么调用
+		// let youxi = {
+		//   name: `狼人杀`,
+		//   [Symbol('say')]: function () {
+		//     console.log('发言');
+		//   },
+		//   [Symbol('boom')]: function () {
+		//     console.log('自爆');
+		//   }
+		// }
+
+		// 第三种添加方法
+		let mysymbol = Symbol()
+		let mysymbol2 = Symbol()
+
+		let youxi = {
+			name: '狼人杀',
+			a: '今天天气不错',
+			[mysymbol]: function (a) {
+				console.log('我可以说话')
+			},
+			[mysymbol2]: function () {
+				console.log('我可以自爆')
+			},
+		}
+		console.log(youxi)
+		youxi[mysymbol]()
+		youxi[mysymbol2]()
+		console.log(youxi.a)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

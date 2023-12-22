@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// rest参数与spread扩展运算符在ES6中已经引入,不过ES6中只针对于数组,在ES9中为对象提供了像数组一样的rest参数和扩展运算符
+	function connect ({ host, port, ...user }) {
+		console.log(host, port, user)
+	}
+
+	// 为后面的三个数据分一组
+	connect({
+		host: '127.0.0.1',
+		port: 5501,
+		username: 'root',
+		password: 'root',
+		type: 'master',
+	})
+
+	// 合并多个对象和数组
+	const skillOne = {
+		q: '天音波/回音击',
+	}
+
+	const skillTwo = {
+		w: '金钟罩/铁布衫',
+	}
+
+	const skillThree = {
+		e: '天雷破/催筋断骨',
+	}
+
+	const skillFour = {
+		q: '猛龙摆尾',
+	}
+
+	// 合并多个对象和数组
+	console.log([...skillOne, ...skillTwo, ...skillThree, ...skillFour])
+</script>
+</body>
+</html>

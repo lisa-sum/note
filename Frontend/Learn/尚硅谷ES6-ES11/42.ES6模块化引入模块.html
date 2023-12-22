@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+
+<body>
+<!-- 需要接收数据的js文件要加上type="module" -->
+<script type="module">
+
+	// 当你采用export default {name,age,height,fn1},暴露数据时,import a1 from,import后的名称可以随意命名,并且不能as重命名,不能采用大括号
+	import a1 from './js/42.1.js'
+
+	console.log(a1)
+
+	// 当你采用export var gender = '男'; export function fn2(){}暴露数据时,import后的名称必须和变量名一样,并且需要使用大括号可以随意as重命名
+	import { gender as a2, fn2 as a3 } from './js/42.1.js'
+
+	console.log(a2, a3)
+
+	// 当你采用export {school, findJob},暴露数据时,import * as a4 from './js/42.1.js';以这种方式来引用,a4.findJob这样调用
+	import * as a4 from './js/42.1.js'
+
+	console.log(a4.findJob)
+
+	// 还有一种获取数据的json的办法,调用ajax网络接口和本地地址的区别只在于路径而已
+	async function fetchFn () {
+		let res = await fetch('./js/42.arrData.json')
+		res = await res.json()
+		console.log(res)
+	}
+
+	fetchFn()
+</script>
+
+<!-- 这样模块化其实也可以 -->
+<script src="./js/42.2.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<script>
+		// 父级构造函数的this指向了子级构造函数 建立了父子__proto__关系 ,子级构造函数的原型对象指向了父级构造函数 建立了父子prototype关系,此时这个三角关系就成了原型链了
+
+		//手机
+		function Phone (brand, price) {
+			this.brand = brand
+			this.price = price
+		}
+
+		//向原型中添加一个call方法,相对于子类来说这是原型中的原型
+		Phone.prototype.call = function () {
+			console.log('打电话')
+		}
+
+		//智能手机
+		function SmartPhone (brand, price, color, size) {
+			// 通过call让phone指向这个函数,此函数为实例,并且让此函数继承brand和price
+			Phone.call(this, brand, price)
+			//这是独有的属性
+			this.color = color
+			this.size = size
+		}
+
+		//设置子级构造函数 设置为父构造函数的实例,这样修改子函数内容,父函数不很跟着一起改变,pink老师有详细说明,同时父也从构造函数转换成了原型
+		SmartPhone.prototype = new Phone
+
+		//声明子类的方法
+		SmartPhone.prototype.photo = function () {
+			console.log('可以拍照')
+		}
+
+		SmartPhone.prototype.playGame = function () {
+			console.log('玩游戏')
+		}
+
+		const chuizi = new SmartPhone('锤子', 2499, '黑色', '5.5inch')
+		console.log(chuizi)
+
+		console.log(chuizi.__proto__)// 验证是否通过call达成了父子__proto__关系
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
