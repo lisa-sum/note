@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/OpenTelemetry/概念.md",
+                "file": "Database/Redis/redis conf.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/OpenTelemetry/概念.md",
+                "file": "Database/Redis/redis conf.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/OpenTelemetry/概念.md",
+                "file": "Database/Redis/redis conf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/OpenTelemetry/概念.md"
+                "file": "Database/Redis/redis conf.md"
               }
             }
           }
@@ -232,6 +232,11 @@
   },
   "active": "500d1247c15f1325",
   "lastOpenFiles": [
+    "Database/Redis/Redis Install.md",
+    "Database/Redis/redis conf.md",
+    "Database/Redis/Redis.md",
+    "Database/Postgres/安装.md",
+    "DevOps/OpenTelemetry/概念.md",
     "Operations/kubernetes/Helm.md",
     "Operations/kubernetes/kiali/CR.md",
     "Operations/kubernetes/集群内部DNS调试.md",
@@ -257,13 +262,8 @@
     "Work/Operations/kubernetes/kubelet/安装.md",
     "Work/Operations/kubernetes/Prometheus/kube-prometheus/安装.md",
     "Work/Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
-    "Work/Operations/kubernetes/jaeger/Kubernetes 安装 Jaeger operator.md",
     "Work/Operations/kubernetes/images/8c04113d6bf961b85708e5e78746afc1.png",
     "Work/Operations/kubernetes/images/Pasted image 20231104182628.png",
-    "Work/Operations/kubernetes/Kubernetes.md",
-    "Work/Operations/kubernetes/部署Kubernetes.md",
-    "Work/Operations/Linux/Shell.md",
-    "Work/Operations/kubernetes/安装kubernetes-v1.24.x以上版本.md",
     "Work/Operations/kubernetes/Prometheus/kube-prometheus",
     "Work/Operations/kubernetes/kubelet",
     "Work/Operations/kubernetes/kubeadm",

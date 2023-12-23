@@ -24,14 +24,17 @@ rename-command flushall b840fc02d524045429941cc15f59e41cb7be6c55
 requirepass 263393
 
 ###  绑定的 IP 列表
-bind 127.0.0.1
-
+# bind 127.0.0.1
+# bind 192.168.1.100 10.0.0.1     # listens on two specific IPv4 addresses
+# bind 127.0.0.1 ::1              # listens on loopback IPv4 and IPv6
+# bind * -::*                     # like the default, all available interfaces
+bind 0.0.0.0
 # 主从模式设置: 主密码
 # masterauth
 # relicaof <masterip> <masterport> 主机ip地址和端口
 
 #  端口
-port 6539
+port 6379
 
 # 以守护进程的方式运行，默认是 no
 daemonize yes
@@ -40,11 +43,11 @@ daemonize yes
 loglevel notice
 
 ### 日志文件
-logfile "/data/redis/data/redis.log"
-
+# logfile ./redis.log
+# logfile ""
 ## 进程
-### 数据库的数量
-database 16
+### 指定客户端连接时默认使用的数据库编号
+# databases 0
 
 ###  最大客户端连接数
 maxclients 10000
@@ -53,16 +56,16 @@ pidfile /var/run/redis_6379.pid
 
 ## 存储
 ###  保存 rdb 的错误校验
-rdbchecksum yes
+# rdbchecksum yes
 
 ###  rdb文件名
 dbfilename dump.rdb
 
 ###  rdb文件保存路径
-dir /data/redis/data/rdb
+dir ./
 
 ### 900秒内至少有1个key被修改，就进行快照
-sava 900 1
+save 900 1
 save 300 10
 
 ### 持久化如果出错，是否还需要继续工作
@@ -77,11 +80,8 @@ appendonly no
 ###持久化文件名
 appendfilename "appendonly.aof"
 
-#  always 每次修改都会 sync。消耗性能，但是数据完整性最好！
+# always 每次修改都会 sync。消耗性能，但是数据完整性最好！
 # everysec 每秒执行一次 sync，可能会丢失这1s的数据！
 # no 不执行 sync，这个时候操作系统自己同步数据，速度最快 ！ 但是数据完整性最差！
 appendfsync no
-
-
-
 ```
