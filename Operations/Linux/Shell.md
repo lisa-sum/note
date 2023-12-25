@@ -1,6 +1,12 @@
 # Shell
 
 #Linux #Shell
+
+系统盘扩容:
+```shell
+lvextend -r -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+```
+
 - sudo ip -s -s neigh flush all 清除系统中的ARP缓存，并强制设备重新获取正确的MAC地址映射
 
 - watch
