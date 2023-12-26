@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operations/Linux/Shell.md",
+                "file": "Backend/Kotlin/Kotlin DSL 源.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c64f01d7ef8daf66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/Redis高可用方案.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -61,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cert-manager",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operations/Linux/Shell.md",
+                "file": "DevOps/Redis高可用方案.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operations/Linux/Shell.md",
+                "file": "DevOps/Redis高可用方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Operations/Linux/Shell.md"
+                "file": "DevOps/Redis高可用方案.md"
               }
             }
           }
@@ -170,13 +182,19 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "3318851aaddde9f7",
+  "active": "3786874522ef803f",
   "lastOpenFiles": [
+    "DevOps/Redis高可用方案.md",
+    "Operations/Linux/systemd service.md",
+    "Backend/Kotlin/Android Studio 中文设置.md",
+    "Backend/Kotlin/Kotlin DSL 源.md",
+    "Other/使用 Android Studio 对APP 简单调试.md",
+    "Backend/Kotlin",
+    "Operations/Linux/Shell.md",
+    "Operations/Linux/Pigsty.md",
     "Database/Redis/redis conf.md",
     "Database/Redis/Redis.md",
-    "Operations/Linux/systemd service.md",
     "Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
-    "Operations/Linux/Shell.md",
     "Operations/kubernetes/LoadBalancer.md",
     "Operations/Linux/网络问题排查.md",
     "Obsidian使用技巧/链接.md",
@@ -197,11 +215,6 @@
     "Operations/Linux/测试网速.md",
     "Obsidian使用技巧",
     "Operations/kubernetes/配置cgroup.md",
-    "Operations/kubernetes/kubeadm/shell.md",
-    "Operations/kubernetes/指令.md",
-    "Operations/kubernetes/Kubernetes.md",
-    "Work/Operations/kubernetes/kubelet/安装.md",
-    "Work/Operations/kubernetes/Prometheus/kube-prometheus/安装.md",
     "Work/Operations/kubernetes/images/8c04113d6bf961b85708e5e78746afc1.png",
     "Work/Operations/kubernetes/images/Pasted image 20231104182628.png",
     "Work/Operations/kubernetes/Prometheus/kube-prometheus",
@@ -213,7 +226,6 @@
     "Work/Operations/kubernetes/images/1a98dd5f1d5f04b50f6cb6a0d5c1faa0.png",
     "Work/Operations/kubernetes/istio",
     "Work/Operations/kubernetes/images/Pasted image 20231205232333.png",
-    "Excalidraw",
     "Work/Operations/Linux/images/Pasted image 20231204144538.png",
     "Work/Operations/Linux/images/Pasted image 20231204143830.png",
     "Work/Operations/Docker/images/Pasted image 20230223154159.png",
