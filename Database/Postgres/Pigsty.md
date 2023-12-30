@@ -394,7 +394,7 @@ EOF
 - -i|--ip: 用于替换IP地址占位符 10.10.10.10 的IP地址，即当前主机的首要内网IP地址（特别是在有多块网卡与多个IP地址时）
 - -r|--region: 用于指定上游源的区域： (default|china|europe)
 - -n|--non-interactive: 直接使用命令行参数提供首要IP地址，跳过交互式向导。
-当使用 -n|--non-interactive 参数时，您需要使用 -i|--ip <ipaddr> 指定当前节点的首要IP地址，特别是在有多块网卡与多个IP地址时
+当使用 -n|--non-interactive 参数时，您需要使用 -i|--ip `<ipaddr>` 指定当前节点的首要IP地址，特别是在有多块网卡与多个IP地址时
 ```shell
 cd ~/pigsty
 ./configure  -r china -i $HOST_MASTER -m pg-config
