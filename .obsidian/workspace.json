@@ -8,31 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "500d1247c15f1325",
+            "id": "4966b3bb7e711f95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operations/Linux/systemd service.md",
+                "file": "Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3318851aaddde9f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend/Kotlin/Kotlin DSL 源.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c64f01d7ef8daf66",
+            "id": "ba66b1f02a395ea8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -42,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "db6c875882e49cf4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Operations/kubernetes/指令.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b65f8aa33026827",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Engineering/VersionManage/Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ed255",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,11 +102,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 280.5
+    "width": 204.5
   },
   "right": {
     "id": "aebe579e27cdb94d",
@@ -110,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Postgres/Pigsty.md",
+                "file": "Engineering/VersionManage/Git.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database/Postgres/Pigsty.md",
+                "file": "Engineering/VersionManage/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +163,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -160,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Postgres/Pigsty.md"
+                "file": "Engineering/VersionManage/Git.md"
               }
             }
           }
@@ -169,8 +184,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,20 +197,30 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "c64f01d7ef8daf66",
+  "active": "7b65f8aa33026827",
   "lastOpenFiles": [
-    "Frontend/Script/身份证验证.md",
+    "Mac M2/brew.md",
     "Database/Postgres/Pigsty.md",
-    "Database/Redis/Redis高可用方案.md",
+    "Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
+    "Operations/kubernetes/install/install.sh",
+    "Operations/kubernetes/install",
+    "Operations/kubernetes/kubeadm-init-custom-conf.md",
+    "Operations/kubernetes/指令.md",
+    "Operations/Linux/Shell.md",
+    "Operations/Linux/sshpass.md",
+    "Operations/Docker/Docker 安装 Harbor.md",
     "Operations/Linux/systemd service.md",
-    "Backend/Kotlin/Android Studio 中文设置.md",
     "Backend/Kotlin/Kotlin DSL 源.md",
+    "Operations/Docker/Docker 安装 Gitlab.md",
+    "test2",
+    "test1",
+    "Frontend/Script/身份证验证.md",
+    "Database/Redis/Redis高可用方案.md",
+    "Backend/Kotlin/Android Studio 中文设置.md",
     "Other/使用 Android Studio 对APP 简单调试.md",
     "Backend/Kotlin",
-    "Operations/Linux/Shell.md",
     "Database/Redis/redis conf.md",
     "Database/Redis/Redis.md",
-    "Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
     "Operations/kubernetes/LoadBalancer.md",
     "Operations/Linux/网络问题排查.md",
     "Obsidian使用技巧/链接.md",
@@ -206,26 +230,16 @@
     "Operations/kubernetes/Helm.md",
     "Operations/kubernetes/kiali/CR.md",
     "Operations/kubernetes/集群内部DNS调试.md",
-    "Operations/kubernetes/Kubernetes部署MinIO Operator.md",
     "Operations/kubernetes/images/Pasted image 20231219190212.png",
     "Operations/kubernetes/images/Pasted image 20231219190505.png",
-    "Operations/kubernetes/Kubernetes部署MinIO Kubernetes Operator.md",
-    "Operations/Linux/一键替换Linux发行版的软件源.md",
-    "Operations/kubernetes/Kubernetes部署Minio Opet.md",
     "Operations/kubernetes/Kubernetes部署Minio Opet",
-    "Operations/MicrosoServer/Kratos/配置管理最佳实践.md",
-    "Operations/Linux/测试网速.md",
     "Obsidian使用技巧",
     "Work/Operations/kubernetes/images/8c04113d6bf961b85708e5e78746afc1.png",
     "Work/Operations/kubernetes/images/Pasted image 20231104182628.png",
     "Work/Operations/kubernetes/Prometheus/kube-prometheus",
     "Work/Operations/kubernetes/kubelet",
     "Work/Operations/kubernetes/kubeadm",
-    "Work/Operations/kubernetes/jaeger",
-    "Work/Operations/kubernetes/Prometheus",
-    "Work/Operations/kubernetes/kiali",
     "Work/Operations/kubernetes/images/1a98dd5f1d5f04b50f6cb6a0d5c1faa0.png",
-    "Work/Operations/kubernetes/istio",
     "Work/Operations/kubernetes/images/Pasted image 20231205232333.png",
     "Work/Operations/Linux/images/Pasted image 20231204144538.png",
     "Work/Operations/Linux/images/Pasted image 20231204143830.png",

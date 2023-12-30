@@ -11,9 +11,9 @@ ssh <user>@host
 2. 创建gitlab的data数据目录
 3. 创建gitlab的logs日志目录
 ```bash
-mkdir -p /data/gitlab/config
-mkdir -p /data/gitlab/logs
-mkdir -p /data/gitlab/data
+mkdir -p /gitlab/config
+mkdir -p /gitlab/logs
+mkdir -p /gitlab/data
 ```
 
 4. 安装Gitlab镜像, 根据需要安装
@@ -33,7 +33,7 @@ ssh_port: 使用 SSH克隆项目的端口, 默认为`22`
 docker run \
 -d \
 -h <host> \
--p <http_port>:<http_port>
+-p <http_port>:<http_por
 -p <https_port>:<https_port>
 -p <ssh_port>:<ssh_port> \
 -e TZ=Asia/Shanghai \
@@ -65,6 +65,34 @@ docker run -d \
 -v /data/gitlab/logs:/var/log/gitlab \
 -v /data/gitlab/data:/var/opt/gitlab \
 gitlab/gitlab-ce:latest
+```
+
+或者compose:
+```yaml
+version: '3.6'
+services:
+  web:
+    image: 'gitlab/gitlab-ee:latest'
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://gitlab.example.com'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
+
+```
+
+```shell
+docker compose up -d
 ```
 
 ## 配置
@@ -185,11 +213,12 @@ ssh-add -l
 
 #### 验证是否可以连接
 ```bash
-ssh -T git@192.168.0.152 -p 2222
+ssh -Tv git@192.168.0.152 -p 2222
 ```
-大写-T 指向主机
-小写-p指向端口
-选择-i指向密钥文件
+- -T 指向主机
+- -v 详细信息
+- -p 指向端口
+- -i 指向密钥文件
  -i ~/.ssh/gitlabpullweb_rsa 
 
 成功提示: `Welcome to GitLab, @wangbin!`
@@ -197,6 +226,8 @@ ssh -T git@192.168.0.152 -p 2222
 ## 查看密码
 
 > 如果忘记密码或者非手动修改密码时这个密码才有效
+> 
+  密码文件将在 24 小时后的第一次重新配置运行中自动删除。
 
 账号: root
 ```bash

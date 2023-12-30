@@ -8,10 +8,8 @@
 ### 检查
 #### [验证每个节点的 MAC 地址和product_uuid是否唯一](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#verify-mac-address)
 
-- You can get the MAC address of the network interfaces using the command `ip link` or `ifconfig -a`  
-    您可以使用以下命令 `ip link` 获取网络接口的 MAC 地址，或者 `ifconfig -a`
-- The product_uuid can be checked by using the command `sudo cat /sys/class/dmi/id/product_uuid`  
-    可以使用以下命令 `sudo cat /sys/class/dmi/id/product_uuid` 检查product_uuid
+- 您可以使用以下命令 `ip link` 获取网络接口的 MAC 地址，或者 `ifconfig -a`
+-  可以使用以下命令 `sudo cat /sys/class/dmi/id/product_uuid` 检查product_uuid
 
 It is very likely that hardware devices will have unique addresses, although some virtual machines may have identical values. Kubernetes uses these values to uniquely identify the nodes in the cluster. If these values are not unique to each node, the installation process may [fail](https://github.com/kubernetes/kubeadm/issues/31).  
 硬件设备很可能具有唯一的地址，尽管某些虚拟机可能具有相同的值。Kubernetes 使用这些值来唯一标识集群中的节点。如果这些值对于每个节点不是唯一的，则安装过程可能会失败。
@@ -54,6 +52,38 @@ These [required ports](https://kubernetes.io/docs/reference/networking/ports-an
 
 如果是只有一个机器, 也可以作为控制平面和工作节点使用, 参考[控制平面节点上调度 Pod](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#control-plane-node-isolation)
 ## 基础环境配置
+
+## [开发Kubernetes端口](https://kubernetes.io/zh-cn/docs/reference/networking/ports-and-protocols)
+
+控制节点需要开启以下下端口:
+
+| 协议	 | 方向	 | 端口范围	       | 目的	                      | 使用者                  |
+|-----|-----|-------------|--------------------------|----------------------|
+| TCP | 	入站 | 	6443	      | Kubernetes API server	   | 所有                   |
+| TCP | 	入站 | 	2379-2380	 | etcd server client API	  | kube-apiserver, etcd |
+| TCP | 	入站 | 	10250	     | Kubelet API	             | 自身, 控制面              |
+| TCP | 	入站 | 	10259	     | kube-scheduler	          | 自身                   |
+| TCP | 	入站 | 	10257	     | kube-controller-manager	 | 自身                   |
+
+```shell
+sudo ufw allow 6443/tcp
+sudo ufw allow 2379:2380/tcp
+sudo ufw allow 10250/tcp
+sudo ufw allow 10259/tcp
+sudo ufw allow 10257/tcp
+```
+
+工作节点需要开启以下下端口:
+
+| 协议	  | 方向	 | 端口范围        | 	目的	                | 使用者     |
+|------|-----|-------------|---------------------|---------|
+| TCP	 | 入站	 | 10250       | 	Kubelet API	       | 自身, 控制面 |
+| TCP	 | 入站	 | 30000-32767 | 	NodePort Services† | 	所有     |
+
+```shell
+sudo ufw allow 10250/tcp
+sudo ufw allow 30000:32767/tcp
+```
 
 **控制平面和工作节点都需要进行设置**
 ### 修改hostname(可选)
@@ -145,7 +175,9 @@ SELinux status:                 disabled
 kubelet 的默认行为是: 如果在节点上检测到交换内存，则无法启动。自 v1.22 起支持 Swap。从 v1.28 开始，只有 `cgroup v2` 支持 Swap, 如果你想检查或升级到`cgroup v2`, 参阅本文的 [[#配置cgroup]]
 kubelet 的 NodeSwap 特性门控是 beta 版，但默认处于禁用状态。
 
-如果 kubelet 未正确配置为使用 swap，则必须禁用 swap:
+如果 kubelet 未正确配置为使用 swap，则必须禁用swap
+
+#### 禁用swap
 
 1. 关闭swap: 将禁用系统上的所有活动 swap 分区, 系统重启后会自动重新启用 swap 分区
 ```shell
@@ -159,7 +191,12 @@ sed -i '/^\/.*swap/s/^/#/' /etc/fstab
 sudo mount -a
 ```
 
-确认是否禁用
+3. 重启机器
+```
+reboot
+```
+
+#### 检查是否禁用
 
 1. 确保`/swap.img	none	swap	sw	0	0` 被`#`注释
 ```shell
@@ -255,6 +292,7 @@ ip_vs_wrr
 ip_vs_sh
 nf_conntrack_ipv4
 ```
+
 ```
 ip_vs  
 ip_vs_rr  
@@ -368,11 +406,50 @@ sudo sysctl --system
 使用二进制`containerd`, 也可以使用其他方式安装, 安装配置即可
 1. 下载, 如果机器无法访问github, 请自行下载并上传
 ```shell
-wget https://github.com/containerd/containerd/releases/download/v1.7.7/containerd-1.7.7-linux-amd64.tar.gz
+export VERSION="1.7.11"
+mkdir -p /home/containerd
+cd /home/containerd
+
+wget https://github.com/containerd/containerd/releases/download/v${VERSION}/containerd-${VERSION}-linux-amd64.tar.gz
+
+tar -xzvf containerd-1.7.11-linux-amd64.tar.gz -C /usr/local/
 ```
-2. 解压
+
+2. 创建systemd service:
+```
+cat > /etc/systemd/system/containerd.service << EOF
+[Unit]
+Description=containerd container runtime
+Documentation=https://containerd.io
+After=network.target local-fs.target
+
+[Service]
+ExecStart=/usr/local/bin/containerd
+
+Type=notify
+Delegate=yes
+KillMode=process
+Restart=always
+RestartSec=5
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNPROC=infinity
+LimitCORE=infinity
+LimitNOFILE=infinity
+# Comment TasksMax if your systemd version does not supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+OOMScoreAdjust=-999
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+启动和加入自启:
 ```shell
-tar -xzvf containerd-1.7.7-linux-amd64.tar.gz -C /usr/local/bin/
+systemctl start containerd
+systemctl enable containerd
 ```
 
 #### Ubuntu
@@ -465,16 +542,7 @@ config_path = "/etc/containerd/certs.d"
 mkdir -p /etc/containerd/certs.d
 ```
 3. [参考](https://blog.csdn.net/IOT_AI/article/details/131975562)和[阿里云](https://help.aliyun.com/zh/acr/user-guide/accelerate-the-pulls-of-docker-official-images)配置加速镜像
-### 网络内核模块
-```shell
-tee /etc/modules-load.d/containerd.conf << EOF 
-overlay 
-br_netfilter 
-EOF 
 
-modprobe overlay 
-modprobe br_netfilter
-```
 ## 安装Kubernetes
 ### [二进制安装](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 #### 安装CNI插件
@@ -732,9 +800,9 @@ nodeRegistration:
   name: master-152 # 建议不使用与/etc/hostst的自定义的域名相同的名称
   taints: null
 ---
+apiVersion: kubeadm.k8s.io/v1beta3
 apiServer:
   timeoutForControlPlane: 4m0s
-apiVersion: kubeadm.k8s.io/v1beta3
 certificatesDir: /etc/kubernetes/pki
 clusterName: kubernetes
 controllerManager: {}
@@ -799,7 +867,7 @@ ctr images pull registry.k8s.io/coredns/coredns:v1.10.1
 kubeadm config validate --v=5 --config=kubeadm-init-conf.yaml
 ```
 
-4. 执行初始化
+#### 执行初始化
 ```shell
 kubeadm init --v=5 --config kubeadm-init-conf.yaml
 ```
@@ -1085,15 +1153,15 @@ kubeadm config images list
 
 > registry.k8s.io/coredns/coredns:v1.10.1 该镜像可能在阿里云的源不存在, 需要从官方源单独pull
 
+示例: 
+containerd:
 ```shell
 ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.28.2
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager:v1.28.2
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler:v1.28.2
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy:v1.28.2
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.9
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.5.9-0
-ctr images pull registry.cn-hangzhou.aliyuncs.com/google_containers/coredns/coredns:v1.10.1
-ctr images pull registry.k8s.io/coredns/coredns:v1.10.1
+```
+
+crictl:
+```shell
+crictl pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.28.2
 ```
 
 - 官方源:
@@ -1484,6 +1552,68 @@ crictl rmi --prune
 
 ## 常见问题
 
+### 自诊断
+```shell
+crictl -v
+ctr -v
+socat -h
+runc -h
+conntrack -h
+ipvsadm -h
+systemctl status kubelet
+systemctl status kubeadm
+systemctl status containerd
+```
+
+#### crictl
+```shell
+sudo crictl --runtime-endpoint unix:///var/run/crio/crio.sock version
+```
+可能的错误: `DEBU[0000] get runtime connection
+FATA[0000] validate service connection: validate CRI v1 runtime API for endpoint "unix:///var/run/crio/crio.sock": rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial unix /var/run/crio/crio.sock: connect: no such file or directory"`
+问题原因: crictl依次查找容器运行时，当查找第一个 unix:///var/run/dockershim.sock 没有找到，所以报错了，需要你手动指定当前kubernetes的容器运行时
+[解决方案](https://www.cnblogs.com/LILEIYAO/p/17169234.html): 手动指定当前kubernetes的容器运行时, 例如`containerd`:
+```shell
+crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock
+```
+检查: 会列出`/etc/crictl.yaml`的文件内容
+```shell
+crictl config --list
+
+
+-> /etc/crictl.yaml
+KEY                    VALUE
+runtime-endpoint       unix:///var/run/containerd/containerd.sock
+image-endpoint         unix:///var/run/containerd/containerd.sock
+timeout                10
+debug                  false
+pull-image-on-create   true
+disable-pull-on-run    false
+```
+
+
+### 基础环境问题
+1. `error execution phase preflight: [preflight] Some fatal errors occurred: [ERROR FileExisting-conntrack]: conntrack not found in system path`
+错误原因: 没有安装`conntrack`这个包
+解决方案: 下载`conntrack`这个包
+Ubuntu:
+```shell
+sudo apt update
+sudo apt install conntrack
+```
+
+2. `[WARNING FileExisting-socat]: socat not found in system path`
+```shell
+apt install socat -y
+```
+
+2. runc缺失
+runc是一个轻量级的容器运行时，用于生成和运行符合OCI（Open Container Initiative）规范的容器。它是一个命令行工具，用于根据OCI格式运行打包的应用程序，并且是符合OCI规范的实现。runc的目标是提供一个标准化的容器运行时，以便在不同的容器平台上实现容器的创建、配置和管理
+解决方案: 下载
+Ubuntu:
+```
+apt apt install runc
+```
 ### kubeadm join
 #### 连接控制节点失败
 错误: `Get "https://kube-apiserver:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s": dial tcp 192.168.0.152:6443: connect: connection refused`

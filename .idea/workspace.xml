@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4978f02-e1a4-4759-b4bc-13953f06368b" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Operations/kubernetes/install/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/workspace.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps/Redis高可用方案.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operations/Linux/Pigsty.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Postgres/Pigsty.md" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Postgres/Pigsty.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operations/Docker/Docker 安装 Gitlab.md" beforeDir="false" afterPath="$PROJECT_DIR$/Operations/Docker/Docker 安装 Gitlab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md" beforeDir="false" afterPath="$PROJECT_DIR$/Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operations/kubernetes/指令.md" beforeDir="false" afterPath="$PROJECT_DIR$/Operations/kubernetes/指令.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/art/Note",
-    "settings.editor.selected.configurable": "editor.preferences.tabs"
+    "settings.editor.selected.configurable": "configurable.group.tools"
   },
   "keyToStringList": {
     "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
