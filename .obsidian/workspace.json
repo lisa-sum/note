@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c0d45caeccaf4c70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Database/Postgres/Pigsty.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -85,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ed255",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,8 +114,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -123,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Engineering/VersionManage/Git.md",
+                "file": "Database/Postgres/Pigsty.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Engineering/VersionManage/Git.md",
+                "file": "Database/Postgres/Pigsty.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Engineering/VersionManage/Git.md"
+                "file": "Database/Postgres/Pigsty.md"
               }
             }
           }
@@ -197,15 +208,18 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "7b65f8aa33026827",
+  "active": "c0d45caeccaf4c70",
   "lastOpenFiles": [
-    "Mac M2/brew.md",
+    "Database/Postgres/sql.md",
+    "Database/Postgres/安装.md",
+    "Operations/kubernetes/指令.md",
+    "Engineering/VersionManage/Git.md",
     "Database/Postgres/Pigsty.md",
+    "Mac M2/brew.md",
     "Operations/kubernetes/Ubuntu与RedHat多操作系统安装Kubernetes.md",
     "Operations/kubernetes/install/install.sh",
     "Operations/kubernetes/install",
     "Operations/kubernetes/kubeadm-init-custom-conf.md",
-    "Operations/kubernetes/指令.md",
     "Operations/Linux/Shell.md",
     "Operations/Linux/sshpass.md",
     "Operations/Docker/Docker 安装 Harbor.md",
@@ -225,11 +239,8 @@
     "Operations/Linux/网络问题排查.md",
     "Obsidian使用技巧/链接.md",
     "Database/Redis/Redis Install.md",
-    "Database/Postgres/安装.md",
     "DevOps/OpenTelemetry/概念.md",
     "Operations/kubernetes/Helm.md",
-    "Operations/kubernetes/kiali/CR.md",
-    "Operations/kubernetes/集群内部DNS调试.md",
     "Operations/kubernetes/images/Pasted image 20231219190212.png",
     "Operations/kubernetes/images/Pasted image 20231219190505.png",
     "Operations/kubernetes/Kubernetes部署Minio Opet",
